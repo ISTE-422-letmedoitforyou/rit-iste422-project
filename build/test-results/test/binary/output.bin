@@ -1,0 +1,18 @@
+:23:22.777 INFO class:EdgeConnector - Getting EndPoint1: 2
+:23:22.779 INFO class:EdgeConnector - Getting EndPoint2: 3
+C23:22.779 INFO class:EdgeConnector - Getting EndStyle1: testStyle1
+C23:22.780 INFO class:EdgeConnector - Getting EndStyle2: testStyle2
+;23:22.780 INFO class:EdgeConnector - Getting Num Connector
+?23:22.781 INFO class:EdgeConnector - Getting IsEP1Field: false
+?23:22.782 INFO class:EdgeConnector - Getting IsEP1Table: false
+	?23:22.782 INFO class:EdgeConnector - Getting IsEP2Field: false
+
+?23:22.783 INFO class:EdgeConnector - Getting IsEP2Table: false
+923:22.783 INFO class:EdgeConnector - Setting IsEP1Field 
+?23:22.785 INFO class:EdgeConnector - Getting IsEP1Field: false
+923:22.786 INFO class:EdgeConnector - Setting IsEP1Table 
+?23:22.786 INFO class:EdgeConnector - Getting IsEP1Table: false
+923:22.787 INFO class:EdgeConnector - Setting IsEP2Field 
+?23:22.787 INFO class:EdgeConnector - Getting IsEP2Field: false
+923:22.787 INFO class:EdgeConnector - Setting IsEP2Table 
+?23:22.788 INFO class:EdgeConnector - Getting IsEP2Table: false

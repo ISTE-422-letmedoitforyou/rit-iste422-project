@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="EdgeConnectorTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2023-04-02T22:23:22" hostname="Catherines-MacBook-Pro-3.local" time="0.395">
+  <properties/>
+  <testcase name="testGetEndPoint1" classname="EdgeConnectorTest" time="0.386"/>
+  <testcase name="testGetEndPoint2" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testGetEndStyle1" classname="EdgeConnectorTest" time="0.0"/>
+  <testcase name="testGetEndStyle2" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testGetNumConnector" classname="EdgeConnectorTest" time="0.0"/>
+  <testcase name="testGetIsEP1Field" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testGetIsEP1Table" classname="EdgeConnectorTest" time="0.0"/>
+  <testcase name="testGetIsEP2Field" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testGetIsEP2Table" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testSetIsEP1Field" classname="EdgeConnectorTest" time="0.002"/>
+  <testcase name="testSetIsEP1Table" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testSetIsEP2Field" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testSetIsEP2Table" classname="EdgeConnectorTest" time="0.0"/>
+  <system-out><![CDATA[23:22.777 INFO class:EdgeConnector - Getting EndPoint1: 2
+23:22.779 INFO class:EdgeConnector - Getting EndPoint2: 3
+23:22.779 INFO class:EdgeConnector - Getting EndStyle1: testStyle1
+23:22.780 INFO class:EdgeConnector - Getting EndStyle2: testStyle2
+23:22.780 INFO class:EdgeConnector - Getting Num Connector
+23:22.781 INFO class:EdgeConnector - Getting IsEP1Field: false
+23:22.782 INFO class:EdgeConnector - Getting IsEP1Table: false
+23:22.782 INFO class:EdgeConnector - Getting IsEP2Field: false
+23:22.783 INFO class:EdgeConnector - Getting IsEP2Table: false
+23:22.783 INFO class:EdgeConnector - Setting IsEP1Field 
+23:22.785 INFO class:EdgeConnector - Getting IsEP1Field: false
+23:22.786 INFO class:EdgeConnector - Setting IsEP1Table 
+23:22.786 INFO class:EdgeConnector - Getting IsEP1Table: false
+23:22.787 INFO class:EdgeConnector - Setting IsEP2Field 
+23:22.787 INFO class:EdgeConnector - Getting IsEP2Field: false
+23:22.787 INFO class:EdgeConnector - Setting IsEP2Table 
+23:22.788 INFO class:EdgeConnector - Getting IsEP2Table: false
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
