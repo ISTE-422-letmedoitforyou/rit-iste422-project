@@ -13,6 +13,7 @@ public class EdgeConnector {
       
    public EdgeConnector(String inputString) {
       timeLogger.info("start _init");
+      timeLogger.info("inputString: " + inputString);
       StringTokenizer st = new StringTokenizer(inputString, EdgeConvertFileParser.DELIM);
       numConnector = Integer.parseInt(st.nextToken());
       endPoint1 = Integer.parseInt(st.nextToken());

@@ -1,97 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EdgeConnectorTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2023-04-03T05:16:06" hostname="Catherines-MacBook-Pro-3.local" time="0.568">
+<testsuite name="EdgeConnectorTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2023-04-03T05:51:57" hostname="Catherines-MacBook-Pro-3.local" time="0.549">
   <properties/>
-  <testcase name="testGetEndPoint1" classname="EdgeConnectorTest" time="0.556"/>
+  <testcase name="testGetEndPoint1" classname="EdgeConnectorTest" time="0.535"/>
   <testcase name="testGetEndPoint2" classname="EdgeConnectorTest" time="0.001"/>
-  <testcase name="testGetEndStyle1" classname="EdgeConnectorTest" time="0.0"/>
+  <testcase name="testGetEndStyle1" classname="EdgeConnectorTest" time="0.001"/>
   <testcase name="testGetEndStyle2" classname="EdgeConnectorTest" time="0.001"/>
   <testcase name="testGetNumConnector" classname="EdgeConnectorTest" time="0.001"/>
   <testcase name="testGetIsEP1Field" classname="EdgeConnectorTest" time="0.001"/>
   <testcase name="testGetIsEP1Table" classname="EdgeConnectorTest" time="0.0"/>
   <testcase name="testGetIsEP2Field" classname="EdgeConnectorTest" time="0.001"/>
-  <testcase name="testGetIsEP2Table" classname="EdgeConnectorTest" time="0.0"/>
-  <testcase name="testSetIsEP1Field" classname="EdgeConnectorTest" time="0.0"/>
-  <testcase name="testSetIsEP1Table" classname="EdgeConnectorTest" time="0.001"/>
-  <testcase name="testSetIsEP2Field" classname="EdgeConnectorTest" time="0.004"/>
+  <testcase name="testGetIsEP2Table" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testSetIsEP1Field" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testSetIsEP1Table" classname="EdgeConnectorTest" time="0.002"/>
+  <testcase name="testSetIsEP2Field" classname="EdgeConnectorTest" time="0.001"/>
   <testcase name="testSetIsEP2Table" classname="EdgeConnectorTest" time="0.001"/>
-  <system-out><![CDATA[2023-04-03 01:16:06,632 Test worker DEBUG Apache Log4j Core 2.13.3 initializing configuration XmlConfiguration[location=/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml]
-2023-04-03 01:16:06,636 Test worker DEBUG Installed 0 script engines
-2023-04-03 01:16:06,637 Test worker DEBUG PluginManager 'Core' found 122 plugins
-2023-04-03 01:16:06,637 Test worker DEBUG PluginManager 'Level' found 0 plugins
-2023-04-03 01:16:06,640 Test worker DEBUG PluginManager 'Lookup' found 16 plugins
-2023-04-03 01:16:06,642 Test worker DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
-2023-04-03 01:16:06,647 Test worker DEBUG PluginManager 'TypeConverter' found 26 plugins
-2023-04-03 01:16:06,657 Test worker DEBUG PatternLayout$Builder(pattern="%d{mm:ss.SSS} %-1level class:%logger{36} - %msg%n", PatternSelector=null, Configuration(/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
-2023-04-03 01:16:06,657 Test worker DEBUG PluginManager 'Converter' found 44 plugins
-2023-04-03 01:16:06,662 Test worker DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.ConsoleAppender].
-2023-04-03 01:16:06,669 Test worker DEBUG ConsoleAppender$Builder(target="SYSTEM_OUT", follow="null", direct="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d{mm:ss.SSS} %-1level class:%logger{36} - %msg%n), name="Console", Configuration(/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml), Filter=null, ={})
-2023-04-03 01:16:06,671 Test worker DEBUG Starting OutputStreamManager SYSTEM_OUT.false.false
-2023-04-03 01:16:06,671 Test worker DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
-2023-04-03 01:16:06,672 Test worker DEBUG PatternLayout$Builder(pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n", PatternSelector=null, Configuration(/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
-2023-04-03 01:16:06,672 Test worker DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.FileAppender].
-2023-04-03 01:16:06,675 Test worker DEBUG FileAppender$Builder(fileName="runner.log", append="false", locking="null", advertise="null", advertiseUri="null", createOnDemand="null", filePermissions="null", fileOwner="null", fileGroup="null", bufferedIo="null", bufferSize="null", immediateFlush="true", ignoreExceptions="null", PatternLayout(%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n), name="MyFile", Configuration(/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml), Filter=null, ={})
-2023-04-03 01:16:06,677 Test worker DEBUG Starting FileManager runner.log
-2023-04-03 01:16:06,677 Test worker DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
-2023-04-03 01:16:06,677 Test worker DEBUG PatternLayout$Builder(pattern="%d{HH:mm:ss.SSS} [%t] %logger{36} - %msg%n", PatternSelector=null, Configuration(/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
-2023-04-03 01:16:06,678 Test worker DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.FileAppender].
-2023-04-03 01:16:06,678 Test worker DEBUG FileAppender$Builder(fileName="timer.log", append="true", locking="null", advertise="null", advertiseUri="null", createOnDemand="null", filePermissions="null", fileOwner="null", fileGroup="null", bufferedIo="null", bufferSize="null", immediateFlush="true", ignoreExceptions="null", PatternLayout(%d{HH:mm:ss.SSS} [%t] %logger{36} - %msg%n), name="Timer", Configuration(/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml), Filter=null, ={})
-2023-04-03 01:16:06,679 Test worker DEBUG Starting FileManager timer.log
-2023-04-03 01:16:06,679 Test worker DEBUG Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
-2023-04-03 01:16:06,680 Test worker DEBUG createAppenders(={Console, MyFile, Timer})
-2023-04-03 01:16:06,681 Test worker DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
-2023-04-03 01:16:06,684 Test worker DEBUG createAppenderRef(ref="Console", level="INFO", Filter=null)
-2023-04-03 01:16:06,685 Test worker DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
-2023-04-03 01:16:06,685 Test worker DEBUG createAppenderRef(ref="MyFile", level="DEBUG", Filter=null)
-2023-04-03 01:16:06,686 Test worker DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
-2023-04-03 01:16:06,686 Test worker DEBUG createAppenderRef(ref="Timer", level="OFF", Filter=null)
-2023-04-03 01:16:06,686 Test worker DEBUG Building Plugin[name=root, class=org.apache.logging.log4j.core.config.LoggerConfig$RootLogger].
-2023-04-03 01:16:06,687 Test worker DEBUG createLogger(additivity="null", level="DEBUG", includeLocation="null", ={Console, MyFile, Timer}, ={}, Configuration(/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml), Filter=null)
-2023-04-03 01:16:06,698 Test worker DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
-2023-04-03 01:16:06,699 Test worker DEBUG createLogger(additivity="false", level="DEBUG", name="RunEdgeConvert", includeLocation="null", ={}, ={}, Configuration(/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml), Filter=null)
-2023-04-03 01:16:06,703 Test worker DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
-2023-04-03 01:16:06,704 Test worker DEBUG createAppenderRef(ref="Timer", level="null", Filter=null)
-2023-04-03 01:16:06,704 Test worker DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
-2023-04-03 01:16:06,705 Test worker DEBUG createLogger(additivity="false", level="INFO", name="timer", includeLocation="null", ={Timer}, ={}, Configuration(/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml), Filter=null)
-2023-04-03 01:16:06,706 Test worker DEBUG Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
-2023-04-03 01:16:06,706 Test worker DEBUG createLoggers(={root, RunEdgeConvert, timer})
-2023-04-03 01:16:06,707 Test worker DEBUG Configuration XmlConfiguration[location=/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml] initialized
-2023-04-03 01:16:06,707 Test worker DEBUG Starting configuration XmlConfiguration[location=/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml]
-2023-04-03 01:16:06,707 Test worker DEBUG Started configuration XmlConfiguration[location=/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml] OK.
-2023-04-03 01:16:06,708 Test worker DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false-1
-2023-04-03 01:16:06,708 Test worker DEBUG OutputStream closed
-2023-04-03 01:16:06,708 Test worker DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false-1, all resources released: true
-2023-04-03 01:16:06,708 Test worker DEBUG Appender DefaultConsole-1 stopped with status true
-2023-04-03 01:16:06,709 Test worker DEBUG Stopped org.apache.logging.log4j.core.config.DefaultConfiguration@2892dae4 OK
-2023-04-03 01:16:06,790 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5b37e0d2
-2023-04-03 01:16:06,792 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5b37e0d2,component=StatusLogger
-2023-04-03 01:16:06,792 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5b37e0d2,component=ContextSelector
-2023-04-03 01:16:06,793 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5b37e0d2,component=Loggers,name=
-2023-04-03 01:16:06,793 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5b37e0d2,component=Loggers,name=timer
-2023-04-03 01:16:06,794 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5b37e0d2,component=Loggers,name=RunEdgeConvert
-2023-04-03 01:16:06,794 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5b37e0d2,component=Appenders,name=Console
-2023-04-03 01:16:06,795 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5b37e0d2,component=Appenders,name=Timer
-2023-04-03 01:16:06,795 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5b37e0d2,component=Appenders,name=MyFile
-2023-04-03 01:16:06,796 Test worker DEBUG org.apache.logging.log4j.core.util.SystemClock supports precise timestamps.
-2023-04-03 01:16:06,798 Test worker DEBUG Reconfiguration complete for context[name=5b37e0d2] at URI /Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml (org.apache.logging.log4j.core.LoggerContext@34cdeda2) with optional ClassLoader: null
-2023-04-03 01:16:06,798 Test worker DEBUG Shutdown hook enabled. Registering a new one.
-2023-04-03 01:16:06,799 Test worker DEBUG LoggerContext[name=5b37e0d2, org.apache.logging.log4j.core.LoggerContext@34cdeda2] started OK.
-16:06.808 INFO class:EdgeConnector - Getting EndPoint1: 2
-16:06.809 INFO class:EdgeConnector - Getting EndPoint2: 3
-16:06.810 INFO class:EdgeConnector - Getting EndStyle1: testStyle1
-16:06.810 INFO class:EdgeConnector - Getting EndStyle2: testStyle2
-16:06.811 INFO class:EdgeConnector - Getting Num Connector1
-16:06.812 INFO class:EdgeConnector - Getting IsEP1Field: false
-16:06.813 INFO class:EdgeConnector - Getting IsEP1Table: false
-16:06.813 INFO class:EdgeConnector - Getting IsEP2Field: false
-16:06.814 INFO class:EdgeConnector - Getting IsEP2Table: false
-16:06.815 INFO class:EdgeConnector - Setting IsEP1Field 
-16:06.815 INFO class:EdgeConnector - Getting IsEP1Field: false
-16:06.815 INFO class:EdgeConnector - Setting IsEP1Table 
-16:06.816 INFO class:EdgeConnector - Getting IsEP1Table: false
-16:06.819 INFO class:EdgeConnector - Setting IsEP2Field 
-16:06.819 INFO class:EdgeConnector - Getting IsEP2Field: false
-16:06.820 INFO class:EdgeConnector - Setting IsEP2Table 
-16:06.820 INFO class:EdgeConnector - Getting IsEP2Table: false
+  <system-out><![CDATA[01:51:57.893 [Test worker] INFO  timer.EdgeConnector - start _init
+01:51:57.896 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+01:51:57.896 [Test worker] INFO  timer.EdgeConnector - end _init
+01:51:57.897 [Test worker] INFO  EdgeConnector - Getting EndPoint1: 2
+01:51:57.898 [Test worker] INFO  timer.EdgeConnector - start _init
+01:51:57.898 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+01:51:57.898 [Test worker] INFO  timer.EdgeConnector - end _init
+01:51:57.899 [Test worker] INFO  EdgeConnector - Getting EndPoint2: 3
+01:51:57.899 [Test worker] INFO  timer.EdgeConnector - start _init
+01:51:57.899 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+01:51:57.899 [Test worker] INFO  timer.EdgeConnector - end _init
+01:51:57.900 [Test worker] INFO  EdgeConnector - Getting EndStyle1: testStyle1
+01:51:57.900 [Test worker] INFO  timer.EdgeConnector - start _init
+01:51:57.900 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+01:51:57.900 [Test worker] INFO  timer.EdgeConnector - end _init
+01:51:57.901 [Test worker] INFO  EdgeConnector - Getting EndStyle2: testStyle2
+01:51:57.901 [Test worker] INFO  timer.EdgeConnector - start _init
+01:51:57.901 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+01:51:57.901 [Test worker] INFO  timer.EdgeConnector - end _init
+01:51:57.901 [Test worker] INFO  EdgeConnector - Getting Num Connector1
+01:51:57.902 [Test worker] INFO  timer.EdgeConnector - start _init
+01:51:57.902 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+01:51:57.902 [Test worker] INFO  timer.EdgeConnector - end _init
+01:51:57.902 [Test worker] INFO  EdgeConnector - Getting IsEP1Field: false
+01:51:57.903 [Test worker] INFO  timer.EdgeConnector - start _init
+01:51:57.903 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+01:51:57.903 [Test worker] INFO  timer.EdgeConnector - end _init
+01:51:57.903 [Test worker] INFO  EdgeConnector - Getting IsEP1Table: false
+01:51:57.904 [Test worker] INFO  timer.EdgeConnector - start _init
+01:51:57.904 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+01:51:57.904 [Test worker] INFO  timer.EdgeConnector - end _init
+01:51:57.904 [Test worker] INFO  EdgeConnector - Getting IsEP2Field: false
+01:51:57.905 [Test worker] INFO  timer.EdgeConnector - start _init
+01:51:57.905 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+01:51:57.905 [Test worker] INFO  timer.EdgeConnector - end _init
+01:51:57.906 [Test worker] INFO  EdgeConnector - Getting IsEP2Table: false
+01:51:57.906 [Test worker] INFO  timer.EdgeConnector - start _init
+01:51:57.906 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+01:51:57.906 [Test worker] INFO  timer.EdgeConnector - end _init
+01:51:57.907 [Test worker] INFO  EdgeConnector - Setting IsEP1Field 
+01:51:57.907 [Test worker] DEBUG EdgeConnector - Setting to ... false
+01:51:57.907 [Test worker] INFO  EdgeConnector - Getting IsEP1Field: false
+01:51:57.907 [Test worker] INFO  timer.EdgeConnector - start _init
+01:51:57.907 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+01:51:57.908 [Test worker] INFO  timer.EdgeConnector - end _init
+01:51:57.908 [Test worker] INFO  EdgeConnector - Setting IsEP1Table 
+01:51:57.908 [Test worker] DEBUG EdgeConnector - Setting to ... false
+01:51:57.909 [Test worker] INFO  EdgeConnector - Getting IsEP1Table: false
+01:51:57.909 [Test worker] INFO  timer.EdgeConnector - start _init
+01:51:57.909 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+01:51:57.909 [Test worker] INFO  timer.EdgeConnector - end _init
+01:51:57.910 [Test worker] INFO  EdgeConnector - Setting IsEP2Field 
+01:51:57.910 [Test worker] DEBUG EdgeConnector - Setting to ... false
+01:51:57.910 [Test worker] INFO  EdgeConnector - Getting IsEP2Field: false
+01:51:57.910 [Test worker] INFO  timer.EdgeConnector - start _init
+01:51:57.910 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+01:51:57.910 [Test worker] INFO  timer.EdgeConnector - end _init
+01:51:57.911 [Test worker] INFO  EdgeConnector - Setting IsEP2Table 
+01:51:57.911 [Test worker] DEBUG EdgeConnector - Setting to ... false
+01:51:57.911 [Test worker] INFO  EdgeConnector - Getting IsEP2Table: false
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
