@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.395s</div>
+<div class="counter">0.567s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">testGetEndPoint1</td>
-<td class="success">0.386s</td>
+<td class="success">0.556s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -114,17 +114,17 @@
 </tr>
 <tr>
 <td class="success">testGetIsEP2Table</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGetNumConnector</td>
 <td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testGetNumConnector</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testSetIsEP1Field</td>
-<td class="success">0.002s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -134,12 +134,12 @@
 </tr>
 <tr>
 <td class="success">testSetIsEP2Field</td>
-<td class="success">0.001s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testSetIsEP2Table</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -147,23 +147,84 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>23:22.777 INFO class:EdgeConnector - Getting EndPoint1: 2
-23:22.779 INFO class:EdgeConnector - Getting EndPoint2: 3
-23:22.779 INFO class:EdgeConnector - Getting EndStyle1: testStyle1
-23:22.780 INFO class:EdgeConnector - Getting EndStyle2: testStyle2
-23:22.780 INFO class:EdgeConnector - Getting Num Connector
-23:22.781 INFO class:EdgeConnector - Getting IsEP1Field: false
-23:22.782 INFO class:EdgeConnector - Getting IsEP1Table: false
-23:22.782 INFO class:EdgeConnector - Getting IsEP2Field: false
-23:22.783 INFO class:EdgeConnector - Getting IsEP2Table: false
-23:22.783 INFO class:EdgeConnector - Setting IsEP1Field 
-23:22.785 INFO class:EdgeConnector - Getting IsEP1Field: false
-23:22.786 INFO class:EdgeConnector - Setting IsEP1Table 
-23:22.786 INFO class:EdgeConnector - Getting IsEP1Table: false
-23:22.787 INFO class:EdgeConnector - Setting IsEP2Field 
-23:22.787 INFO class:EdgeConnector - Getting IsEP2Field: false
-23:22.787 INFO class:EdgeConnector - Setting IsEP2Table 
-23:22.788 INFO class:EdgeConnector - Getting IsEP2Table: false
+<pre>2023-04-03 01:16:06,632 Test worker DEBUG Apache Log4j Core 2.13.3 initializing configuration XmlConfiguration[location=/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml]
+2023-04-03 01:16:06,636 Test worker DEBUG Installed 0 script engines
+2023-04-03 01:16:06,637 Test worker DEBUG PluginManager 'Core' found 122 plugins
+2023-04-03 01:16:06,637 Test worker DEBUG PluginManager 'Level' found 0 plugins
+2023-04-03 01:16:06,640 Test worker DEBUG PluginManager 'Lookup' found 16 plugins
+2023-04-03 01:16:06,642 Test worker DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2023-04-03 01:16:06,647 Test worker DEBUG PluginManager 'TypeConverter' found 26 plugins
+2023-04-03 01:16:06,657 Test worker DEBUG PatternLayout$Builder(pattern=&quot;%d{mm:ss.SSS} %-1level class:%logger{36} - %msg%n&quot;, PatternSelector=null, Configuration(/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml), Replace=null, charset=&quot;null&quot;, alwaysWriteExceptions=&quot;null&quot;, disableAnsi=&quot;null&quot;, noConsoleNoAnsi=&quot;null&quot;, header=&quot;null&quot;, footer=&quot;null&quot;)
+2023-04-03 01:16:06,657 Test worker DEBUG PluginManager 'Converter' found 44 plugins
+2023-04-03 01:16:06,662 Test worker DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.ConsoleAppender].
+2023-04-03 01:16:06,669 Test worker DEBUG ConsoleAppender$Builder(target=&quot;SYSTEM_OUT&quot;, follow=&quot;null&quot;, direct=&quot;null&quot;, bufferedIo=&quot;null&quot;, bufferSize=&quot;null&quot;, immediateFlush=&quot;null&quot;, ignoreExceptions=&quot;null&quot;, PatternLayout(%d{mm:ss.SSS} %-1level class:%logger{36} - %msg%n), name=&quot;Console&quot;, Configuration(/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml), Filter=null, ={})
+2023-04-03 01:16:06,671 Test worker DEBUG Starting OutputStreamManager SYSTEM_OUT.false.false
+2023-04-03 01:16:06,671 Test worker DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2023-04-03 01:16:06,672 Test worker DEBUG PatternLayout$Builder(pattern=&quot;%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n&quot;, PatternSelector=null, Configuration(/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml), Replace=null, charset=&quot;null&quot;, alwaysWriteExceptions=&quot;null&quot;, disableAnsi=&quot;null&quot;, noConsoleNoAnsi=&quot;null&quot;, header=&quot;null&quot;, footer=&quot;null&quot;)
+2023-04-03 01:16:06,672 Test worker DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.FileAppender].
+2023-04-03 01:16:06,675 Test worker DEBUG FileAppender$Builder(fileName=&quot;runner.log&quot;, append=&quot;false&quot;, locking=&quot;null&quot;, advertise=&quot;null&quot;, advertiseUri=&quot;null&quot;, createOnDemand=&quot;null&quot;, filePermissions=&quot;null&quot;, fileOwner=&quot;null&quot;, fileGroup=&quot;null&quot;, bufferedIo=&quot;null&quot;, bufferSize=&quot;null&quot;, immediateFlush=&quot;true&quot;, ignoreExceptions=&quot;null&quot;, PatternLayout(%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n), name=&quot;MyFile&quot;, Configuration(/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml), Filter=null, ={})
+2023-04-03 01:16:06,677 Test worker DEBUG Starting FileManager runner.log
+2023-04-03 01:16:06,677 Test worker DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2023-04-03 01:16:06,677 Test worker DEBUG PatternLayout$Builder(pattern=&quot;%d{HH:mm:ss.SSS} [%t] %logger{36} - %msg%n&quot;, PatternSelector=null, Configuration(/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml), Replace=null, charset=&quot;null&quot;, alwaysWriteExceptions=&quot;null&quot;, disableAnsi=&quot;null&quot;, noConsoleNoAnsi=&quot;null&quot;, header=&quot;null&quot;, footer=&quot;null&quot;)
+2023-04-03 01:16:06,678 Test worker DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.FileAppender].
+2023-04-03 01:16:06,678 Test worker DEBUG FileAppender$Builder(fileName=&quot;timer.log&quot;, append=&quot;true&quot;, locking=&quot;null&quot;, advertise=&quot;null&quot;, advertiseUri=&quot;null&quot;, createOnDemand=&quot;null&quot;, filePermissions=&quot;null&quot;, fileOwner=&quot;null&quot;, fileGroup=&quot;null&quot;, bufferedIo=&quot;null&quot;, bufferSize=&quot;null&quot;, immediateFlush=&quot;true&quot;, ignoreExceptions=&quot;null&quot;, PatternLayout(%d{HH:mm:ss.SSS} [%t] %logger{36} - %msg%n), name=&quot;Timer&quot;, Configuration(/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml), Filter=null, ={})
+2023-04-03 01:16:06,679 Test worker DEBUG Starting FileManager timer.log
+2023-04-03 01:16:06,679 Test worker DEBUG Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
+2023-04-03 01:16:06,680 Test worker DEBUG createAppenders(={Console, MyFile, Timer})
+2023-04-03 01:16:06,681 Test worker DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-04-03 01:16:06,684 Test worker DEBUG createAppenderRef(ref=&quot;Console&quot;, level=&quot;INFO&quot;, Filter=null)
+2023-04-03 01:16:06,685 Test worker DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-04-03 01:16:06,685 Test worker DEBUG createAppenderRef(ref=&quot;MyFile&quot;, level=&quot;DEBUG&quot;, Filter=null)
+2023-04-03 01:16:06,686 Test worker DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-04-03 01:16:06,686 Test worker DEBUG createAppenderRef(ref=&quot;Timer&quot;, level=&quot;OFF&quot;, Filter=null)
+2023-04-03 01:16:06,686 Test worker DEBUG Building Plugin[name=root, class=org.apache.logging.log4j.core.config.LoggerConfig$RootLogger].
+2023-04-03 01:16:06,687 Test worker DEBUG createLogger(additivity=&quot;null&quot;, level=&quot;DEBUG&quot;, includeLocation=&quot;null&quot;, ={Console, MyFile, Timer}, ={}, Configuration(/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml), Filter=null)
+2023-04-03 01:16:06,698 Test worker DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
+2023-04-03 01:16:06,699 Test worker DEBUG createLogger(additivity=&quot;false&quot;, level=&quot;DEBUG&quot;, name=&quot;RunEdgeConvert&quot;, includeLocation=&quot;null&quot;, ={}, ={}, Configuration(/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml), Filter=null)
+2023-04-03 01:16:06,703 Test worker DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-04-03 01:16:06,704 Test worker DEBUG createAppenderRef(ref=&quot;Timer&quot;, level=&quot;null&quot;, Filter=null)
+2023-04-03 01:16:06,704 Test worker DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
+2023-04-03 01:16:06,705 Test worker DEBUG createLogger(additivity=&quot;false&quot;, level=&quot;INFO&quot;, name=&quot;timer&quot;, includeLocation=&quot;null&quot;, ={Timer}, ={}, Configuration(/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml), Filter=null)
+2023-04-03 01:16:06,706 Test worker DEBUG Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
+2023-04-03 01:16:06,706 Test worker DEBUG createLoggers(={root, RunEdgeConvert, timer})
+2023-04-03 01:16:06,707 Test worker DEBUG Configuration XmlConfiguration[location=/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml] initialized
+2023-04-03 01:16:06,707 Test worker DEBUG Starting configuration XmlConfiguration[location=/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml]
+2023-04-03 01:16:06,707 Test worker DEBUG Started configuration XmlConfiguration[location=/Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml] OK.
+2023-04-03 01:16:06,708 Test worker DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false-1
+2023-04-03 01:16:06,708 Test worker DEBUG OutputStream closed
+2023-04-03 01:16:06,708 Test worker DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false-1, all resources released: true
+2023-04-03 01:16:06,708 Test worker DEBUG Appender DefaultConsole-1 stopped with status true
+2023-04-03 01:16:06,709 Test worker DEBUG Stopped org.apache.logging.log4j.core.config.DefaultConfiguration@2892dae4 OK
+2023-04-03 01:16:06,790 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5b37e0d2
+2023-04-03 01:16:06,792 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5b37e0d2,component=StatusLogger
+2023-04-03 01:16:06,792 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5b37e0d2,component=ContextSelector
+2023-04-03 01:16:06,793 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5b37e0d2,component=Loggers,name=
+2023-04-03 01:16:06,793 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5b37e0d2,component=Loggers,name=timer
+2023-04-03 01:16:06,794 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5b37e0d2,component=Loggers,name=RunEdgeConvert
+2023-04-03 01:16:06,794 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5b37e0d2,component=Appenders,name=Console
+2023-04-03 01:16:06,795 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5b37e0d2,component=Appenders,name=Timer
+2023-04-03 01:16:06,795 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5b37e0d2,component=Appenders,name=MyFile
+2023-04-03 01:16:06,796 Test worker DEBUG org.apache.logging.log4j.core.util.SystemClock supports precise timestamps.
+2023-04-03 01:16:06,798 Test worker DEBUG Reconfiguration complete for context[name=5b37e0d2] at URI /Users/catherineliu/Documents/rit-iste422-project/build/resources/main/log4j2.xml (org.apache.logging.log4j.core.LoggerContext@34cdeda2) with optional ClassLoader: null
+2023-04-03 01:16:06,798 Test worker DEBUG Shutdown hook enabled. Registering a new one.
+2023-04-03 01:16:06,799 Test worker DEBUG LoggerContext[name=5b37e0d2, org.apache.logging.log4j.core.LoggerContext@34cdeda2] started OK.
+16:06.808 INFO class:EdgeConnector - Getting EndPoint1: 2
+16:06.809 INFO class:EdgeConnector - Getting EndPoint2: 3
+16:06.810 INFO class:EdgeConnector - Getting EndStyle1: testStyle1
+16:06.810 INFO class:EdgeConnector - Getting EndStyle2: testStyle2
+16:06.811 INFO class:EdgeConnector - Getting Num Connector1
+16:06.812 INFO class:EdgeConnector - Getting IsEP1Field: false
+16:06.813 INFO class:EdgeConnector - Getting IsEP1Table: false
+16:06.813 INFO class:EdgeConnector - Getting IsEP2Field: false
+16:06.814 INFO class:EdgeConnector - Getting IsEP2Table: false
+16:06.815 INFO class:EdgeConnector - Setting IsEP1Field 
+16:06.815 INFO class:EdgeConnector - Getting IsEP1Field: false
+16:06.815 INFO class:EdgeConnector - Setting IsEP1Table 
+16:06.816 INFO class:EdgeConnector - Getting IsEP1Table: false
+16:06.819 INFO class:EdgeConnector - Setting IsEP2Field 
+16:06.819 INFO class:EdgeConnector - Getting IsEP2Field: false
+16:06.820 INFO class:EdgeConnector - Setting IsEP2Table 
+16:06.820 INFO class:EdgeConnector - Getting IsEP2Table: false
 </pre>
 </span>
 </div>
@@ -175,7 +236,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.0.1</a> at Apr 2, 2023, 6:23:22 PM</p>
+<a href="http://www.gradle.org">Gradle 8.0.1</a> at Apr 3, 2023, 1:16:06 AM</p>
 </div>
 </div>
 </body>
