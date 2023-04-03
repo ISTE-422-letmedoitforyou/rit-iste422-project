@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="DEBUG">
+<Configuration status="INFO">
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{mm:ss.SSS} %-1level class:%logger{36} - %msg%n" />
@@ -22,6 +22,7 @@
 
 
         <Logger name="RunEdgeConvert" level="debug" additivity="false">
+        
 
 
             <!-- <AppenderRef ref="Console"/> -->
