@@ -20,36 +20,44 @@ public class EdgeTable {
    }
 
    public int getNumFigure() {
+      logger.info("Retrieving numFigure " + numFigure);
       return numFigure;
    }
 
    public String getName() {
+      logger.info("Retrieving name " + name);
       return name;
    }
 
    public void addRelatedTable(int relatedTable) {
+      logger.info("Related table being added.");
       logger.info("Adding related table " + relatedTable);
       alRelatedTables.add(new Integer(relatedTable));
    }
 
    public int[] getRelatedTablesArray() {
+      logger.info("Retrieving related tables " + Arrays.toString(relatedTables));
       return relatedTables;
    }
 
    public int[] getRelatedFieldsArray() {
+      logger.info("Retrieving related fields " + Arrays.toString(relatedFields));
       return relatedFields;
    }
 
    public void setRelatedField(int index, int relatedValue) {
-      logger.info("Setting related field " + index + " with value " + relatedValue);
+      logger.info("Related fields being set.");
+      logger.debug("Setting related field " + index + " with value " + relatedValue);
       relatedFields[index] = relatedValue;
    }
 
    public int[] getNativeFieldsArray() {
+      logger.info("Retrieving native fields " + Arrays.toString(nativeFields));
       return nativeFields;
    }
 
    public void addNativeField(int value) {
+      logger.info("Native field being added.");
       logger.info("Adding native field " + value);
       alNativeFields.add(new Integer(value));
    }
@@ -57,6 +65,7 @@ public class EdgeTable {
    public void moveFieldUp(int index) { // move the field closer to the beginning of the list
       logger.debug("Moving field up at index " + index);
       if (index == 0) {
+         logger.debug("Field has been moved.");
          return;
       }
       int tempNative = nativeFields[index - 1]; // save element at destination index
@@ -70,6 +79,7 @@ public class EdgeTable {
    public void moveFieldDown(int index) { // move the field closer to the end of the list
       logger.debug("Moving down to index " + index);
       if (index == (nativeFields.length - 1)) {
+         logger.debug("Field has been moved.");
          return;
       }
       int tempNative = nativeFields[index + 1]; // save element at destination index
