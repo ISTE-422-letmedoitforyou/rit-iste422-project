@@ -1052,7 +1052,7 @@ public class EdgeConvertGUI {
       if (classLocation.startsWith("jar:")) {
           String jarfilename = classLocation.replaceFirst("^.*:", "").replaceFirst("!.*$", "");
           System.out.println("Jarfile: " + jarfilename);
-          logger.info("Jarfile: " + jarfilename)
+          logger.info("Jarfile: " + jarfilename);
           try (JarFile jarfile = new JarFile(jarfilename)) {
               ArrayList<File> filenames = new ArrayList<>();
               for (JarEntry e : Collections.list(jarfile.entries())) {
