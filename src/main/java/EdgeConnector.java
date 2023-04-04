@@ -4,7 +4,7 @@ import org.apache.logging.log4j.Logger;
 
 public class EdgeConnector {
 
-   public static Logger logger = LogManager.getLogger(EdgeConnector.class.getName());
+   public static Logger logger = LogManager.getLogger(EdgeConnector.class);
    public static Logger timeLogger = LogManager.getLogger("timer." + EdgeConnector.class.getName());
 
    private int numConnector, endPoint1, endPoint2;
@@ -13,6 +13,7 @@ public class EdgeConnector {
       
    public EdgeConnector(String inputString) {
       timeLogger.info("start _init");
+      timeLogger.info("inputString: " + inputString);
       StringTokenizer st = new StringTokenizer(inputString, EdgeConvertFileParser.DELIM);
       numConnector = Integer.parseInt(st.nextToken());
       endPoint1 = Integer.parseInt(st.nextToken());
@@ -27,7 +28,7 @@ public class EdgeConnector {
    }
    
    public int getNumConnector() {
-      logger.info("Getting Num Connector");
+      logger.info("Getting Num Connector" + numConnector);
       return numConnector;
    }
    
@@ -72,25 +73,25 @@ public class EdgeConnector {
 
    public void setIsEP1Field(boolean value) {
       logger.info("Setting IsEP1Field ");
-      logger.debug("Setting to" + value);
+      logger.debug("Setting to ... " + value);
       isEP1Field = value;
    }
    
    public void setIsEP2Field(boolean value) {
       logger.info("Setting IsEP2Field ");
-      logger.debug("Setting to" + value);
+      logger.debug("Setting to ... " + value);
       isEP2Field = value;
    }
 
    public void setIsEP1Table(boolean value) {
       logger.info("Setting IsEP1Table ");
-      logger.debug("Setting to" + value);
+      logger.debug("Setting to ... " + value);
       isEP1Table = value;
    }
 
    public void setIsEP2Table(boolean value) {
       logger.info("Setting IsEP2Table ");
-      logger.debug("Setting to" + value);
+      logger.debug("Setting to ... " + value);
       isEP2Table = value;
    }
 }

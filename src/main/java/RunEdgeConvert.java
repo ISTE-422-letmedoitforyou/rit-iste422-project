@@ -5,7 +5,7 @@ public class RunEdgeConvert {
    static {
         System.setProperty("java.util.logging.SimpleFormatter.format",
                 "[%1$tF %1$tT %1$tL] [%4$-7s] %5$s %n");
-        System.setProperty("java.util.logging.ConsoleHandler.level", "FILE");
+        System.setProperty("java.util.logging.ConsoleHandler.level", "FINE");
     }
 
    public static void main(String[] args) {
