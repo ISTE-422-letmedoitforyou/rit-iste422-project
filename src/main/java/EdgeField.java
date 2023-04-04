@@ -29,68 +29,82 @@ public class EdgeField {
    }
 
    public int getNumFigure() {
+      logger.info("Retrieving numFigure " + numFigure);
       return numFigure;
    }
 
    public String getName() {
+      logger.info("Retrieving name " + name);
       return name;
    }
 
    public int getTableID() {
+      logger.info("Retrieving tableID " + tableID);
       return tableID;
    }
 
    public void setTableID(int value) {
-      logger.info("Setting table id for field " + name + ": " + value);
+      logger.info("Setting table id");
+      logger.debug("Table id for field is now " + name + ": " + value);
       tableID = value;
    }
 
    public int getTableBound() {
+      logger.info("Table Bound : " + tableBound);
       return tableBound;
    }
 
    public void setTableBound(int value) {
-      logger.info("Setting table bound : " + value);
+      logger.info("Setting Table Bound");
+      logger.debug("Field " + name + " is now bound to table " + value);
       tableBound = value;
    }
 
    public int getFieldBound() {
+      logger.info("Retrieving Field Bound : " + fieldBound);
       return fieldBound;
    }
 
    public void setFieldBound(int value) {
-      logger.info("Setting field bound : " + value);
+      logger.info("Setting Field Bound");
+      logger.debug("Field " + name + " is now bound to " + value);
       fieldBound = value;
    }
 
    public boolean getDisallowNull() {
+      logger.info("Current disallow null value : " + disallowNull);
       return disallowNull;
    }
 
    public void setDisallowNull(boolean value) {
-      logger.info("Disallow null : " + value);
+      logger.info("Setting disallow null");
+      logger.debug("Disallow null is now set to " + value);
       disallowNull = value;
    }
 
    public boolean getIsPrimaryKey() {
+      logger.info("Is primary key? : " + isPrimaryKey);
       return isPrimaryKey;
    }
 
    public void setIsPrimaryKey(boolean value) {
-      logger.debug("Setting as primary key? : " + value);
+      logger.debug("Setting as primary key? " + value);
       isPrimaryKey = value;
    }
 
    public String getDefaultValue() {
+      logger.info("Default value is set to : " + defaultValue);
       return defaultValue;
    }
 
    public void setDefaultValue(String value) {
-      logger.debug("Setting default value : " + value);
+      logger.info("Setting default value");
+      logger.debug("Default value is now " + value);
       defaultValue = value;
    }
 
    public int getVarcharValue() {
+      logger.info("varcharValue is " + varcharValue);
       return varcharValue;
    }
 
@@ -104,7 +118,7 @@ public class EdgeField {
    }
 
    public int getDataType() {
-      logger.debug("Field data type : " + dataType);
+      logger.info("Field data type : " + dataType);
       return dataType;
    }
 

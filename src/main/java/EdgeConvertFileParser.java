@@ -5,7 +5,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class EdgeConvertFileParser {
-   private String filename = "test.edg";
    public static Logger logger = LogManager.getLogger(EdgeConvertFileParser.class);
 
    private File parseFile;
@@ -31,7 +30,7 @@ public class EdgeConvertFileParser {
    public static final String DELIM = "|";
 
    public EdgeConvertFileParser(File constructorFile) {
-      logger.debug("Creating EdgeConvertFileParser with " + constructorFile);
+      logger.info("Creating EdgeConvertFileParser with " + constructorFile);
       numFigure = 0;
       numConnector = 0;
       alTables = new ArrayList();
@@ -297,19 +296,19 @@ public class EdgeConvertFileParser {
    private void makeArrays() { // convert ArrayList objects into arrays of the appropriate Class type
       if (alTables != null) {
          tables = (EdgeTable[]) alTables.toArray(new EdgeTable[alTables.size()]);
-         logger.info("Array of tables made: " + Arrays.toString(tables));
+         logger.debug("Array of tables made: " + Arrays.toString(tables));
       } else {
          logger.warn("Tables are null.");
       }
       if (alFields != null) {
          fields = (EdgeField[]) alFields.toArray(new EdgeField[alFields.size()]);
-         logger.info("Array of fields made: " + Arrays.toString(fields));
+         logger.debug("Array of fields made: " + Arrays.toString(fields));
       } else {
          logger.warn("Fields are null.");
       }
       if (alConnectors != null) {
          connectors = (EdgeConnector[]) alConnectors.toArray(new EdgeConnector[alConnectors.size()]);
-         logger.info("Number of connectors made: " + connectors.length);
+         logger.debug("Number of connectors made: " + connectors.length);
       } else {
          logger.warn("Connectors are null.");
       }
@@ -330,6 +329,8 @@ public class EdgeConvertFileParser {
    public EdgeTable[] getEdgeTables() {
       if (fields != null) {
          logger.info("EdgeTables found : " + Arrays.toString(tables));
+      } else {
+         logger.warn("EdgeTables are null.");
       }
       return tables;
    }
@@ -337,6 +338,8 @@ public class EdgeConvertFileParser {
    public EdgeField[] getEdgeFields() {
       if (fields != null) {
          logger.info("EdgeFields found : " + Arrays.toString(fields));
+      } else {
+         logger.warn("EdgeFields are null.");
       }
       return fields;
    }
