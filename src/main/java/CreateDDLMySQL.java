@@ -7,6 +7,9 @@ import java.util.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class CreateDDLMySQL extends EdgeConvertCreateDDL {
    public static Logger logger = LogManager.getLogger(EdgeConvertCreateDDL.class.getName());
    protected String databaseName;
@@ -14,15 +17,16 @@ public class CreateDDLMySQL extends EdgeConvertCreateDDL {
    protected String[] strDataType = { "VARCHAR", "BOOL", "INT", "DOUBLE" };
    protected StringBuffer sb;
 
+   public static Logger logger = LogManager.getLogger(CreateDDLMySQL.class);
+
    public CreateDDLMySQL(EdgeTable[] inputTables, EdgeField[] inputFields) {
       super(inputTables, inputFields);
       logger.info("Creating instance of CreateDDLMySQL");
       sb = new StringBuffer();
-   } // CreateDDLMySQL(EdgeTable[], EdgeField[])
-
-   public CreateDDLMySQL() { // default constructor with empty arg list for to allow output dir to be set
-                             // before there are table and field objects
-
+   } //CreateDDLMySQL(EdgeTable[], EdgeField[])
+   
+   public CreateDDLMySQL() { //default constructor with empty arg list for to allow output dir to be set before there are table and field objects
+      logger.debug("constructor created");
    }
 
    public void createDDL() {
@@ -30,11 +34,11 @@ public class CreateDDLMySQL extends EdgeConvertCreateDDL {
       databaseName = generateDatabaseName();
       logger.info("Using database " + databaseName);
       sb.append("CREATE DATABASE " + databaseName + ";\r\n");
+      logger.debug(databaseName + " database created");
       sb.append("USE " + databaseName + ";\r\n");
-      for (int boundCount = 0; boundCount <= maxBound; boundCount++) { // process tables in order from least dependent
-                                                                       // (least number of bound tables) to most
-                                                                       // dependent
-         for (int tableCount = 0; tableCount < numBoundTables.length; tableCount++) { // step through list of tables
+      logger.debug("entered " + databaseName + " database");
+      for (int boundCount = 0; boundCount <= maxBound; boundCount++) { //process tables in order from least dependent (least number of bound tables) to most dependent
+         for (int tableCount = 0; tableCount < numBoundTables.length; tableCount++) { //step through list of tables
             if (numBoundTables[tableCount] == boundCount) { //
                sb.append("CREATE TABLE " + tables[tableCount].getName() + " (\r\n");
                int[] nativeFields = tables[tableCount].getNativeFieldsArray();
@@ -53,6 +57,7 @@ public class CreateDDLMySQL extends EdgeConvertCreateDDL {
                   }
                   if (currentField.getDisallowNull()) {
                      sb.append(" NOT NULL");
+                     logger.warn("null value is not allowed");
                   }
                   if (!currentField.getDefaultValue().equals("")) {
                      if (currentField.getDataType() == 1) { // boolean data type
@@ -64,11 +69,13 @@ public class CreateDDLMySQL extends EdgeConvertCreateDDL {
                   if (currentField.getIsPrimaryKey()) {
                      primaryKey[nativeFieldCount] = true;
                      numPrimaryKey++;
+                     logger.info("current field is a primary key");
                   } else {
                      primaryKey[nativeFieldCount] = false;
                   }
                   if (currentField.getFieldBound() != 0) {
                      numForeignKey++;
+                     logger.info("current field is a foreign key");
                   }
                   sb.append(",\r\n"); // end of field
                }
@@ -142,14 +149,17 @@ public class CreateDDLMySQL extends EdgeConvertCreateDDL {
          if (databaseName.equals("")) {
             logger.warn("Empty string database name");
             JOptionPane.showMessageDialog(null, "You must select a name for your database.");
+            logger.warn("entered database without name");
          }
       } while (databaseName.equals(""));
+      logger.debug("database " + databaseName + " created");
       return databaseName;
    }
 
    public String getDatabaseName() {
       logger.info("Retrieved database name " + databaseName);
       return databaseName;
+      logger.info("database name: " + databaseName);
    }
 
    public String getProductName() {
