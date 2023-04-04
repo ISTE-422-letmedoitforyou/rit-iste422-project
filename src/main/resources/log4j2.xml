@@ -17,7 +17,6 @@
             <AppenderRef ref="MyFile" level="debug"/>
             <AppenderRef ref="Timer" level="off"/>
         </Root>
-
         <Logger name="timer" level="info" additivity="false">
             <AppenderRef ref="Timer"/>
         </Logger>
