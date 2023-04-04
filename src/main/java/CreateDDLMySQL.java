@@ -11,7 +11,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class CreateDDLMySQL extends EdgeConvertCreateDDL {
-   public static Logger logger = LogManager.getLogger(EdgeConvertCreateDDL.class.getName());
+   //public static Logger logger = LogManager.getLogger(EdgeConvertCreateDDL.class.getName());
    protected String databaseName;
    // this array is for determining how MySQL refers to datatypes
    protected String[] strDataType = { "VARCHAR", "BOOL", "INT", "DOUBLE" };
@@ -159,7 +159,7 @@ public class CreateDDLMySQL extends EdgeConvertCreateDDL {
    public String getDatabaseName() {
       logger.info("Retrieved database name " + databaseName);
       return databaseName;
-      logger.info("database name: " + databaseName);
+      //logger.info("database name: " + databaseName);
    }
 
    public String getProductName() {

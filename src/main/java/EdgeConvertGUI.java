@@ -825,7 +825,6 @@ public class EdgeConvertGUI {
       for (int tIndex = 0; tIndex < tables.length; tIndex++) {
          if (tables[tIndex].getNumFigure() == numFigure) {
             return tables[tIndex].getName();
-            logger.debug("TableName:" +tables[tIndex].getName() );
          }
       }
       return "";
@@ -836,7 +835,6 @@ public class EdgeConvertGUI {
       for (int fIndex = 0; fIndex < fields.length; fIndex++) {
          if (fields[fIndex].getNumFigure() == numFigure) {
             return fields[fIndex].getName();
-            logger.debug("FieldName:" +fields[fIndex].getName());
          }
       }
       return "";
