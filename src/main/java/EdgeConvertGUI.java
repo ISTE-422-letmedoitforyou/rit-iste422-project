@@ -938,7 +938,9 @@ public class EdgeConvertGUI {
          if (saveFile.exists ()) {
              int response = JOptionPane.showConfirmDialog(null, "Overwrite existing file?", "Confirm Overwrite",
                 JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+                logger.info("File Overwritten");
              if (response == JOptionPane.CANCEL_OPTION) {
+                logger.info("File Canceled");
                 return;
              }
          }
@@ -954,6 +956,7 @@ public class EdgeConvertGUI {
          return;
       }
       writeSave();
+      
    }
    
    private void writeSave() {
@@ -979,6 +982,7 @@ public class EdgeConvertGUI {
             logger.warn("IO Exception" + ioe);
          }
          dataSaved = true;
+         logger.info("File Saved");
       }
    }
 
@@ -1036,6 +1040,7 @@ public class EdgeConvertGUI {
    private void getOutputClasses() {
       logger.info("getting output classes");
       File[] resultFiles = {};
+      logger.debug("Files for output class: " + resultFiles);
       Class resultClass = null;
       Class[] paramTypes = {EdgeTable[].class, EdgeField[].class};
       Class[] paramTypesNull = {};
@@ -1047,6 +1052,7 @@ public class EdgeConvertGUI {
       if (classLocation.startsWith("jar:")) {
           String jarfilename = classLocation.replaceFirst("^.*:", "").replaceFirst("!.*$", "");
           System.out.println("Jarfile: " + jarfilename);
+          logger.info("Jarfile: " + jarfilename)
           try (JarFile jarfile = new JarFile(jarfilename)) {
               ArrayList<File> filenames = new ArrayList<>();
               for (JarEntry e : Collections.list(jarfile.entries())) {
@@ -1065,7 +1071,7 @@ public class EdgeConvertGUI {
       try {
          for (int i = 0; i < resultFiles.length; i++) {
          System.out.println(resultFiles[i].getName());
-         logger.info("result files" + resultFiles[i].getName());
+         logger.info("result files: " + resultFiles[i].getName());
             if (!resultFiles[i].getName().endsWith(".class")) {
                continue; //ignore all files that are not .class files
             }
@@ -1179,7 +1185,7 @@ public class EdgeConvertGUI {
    
    class EdgeRadioButtonListener implements ActionListener {
       public void actionPerformed(ActionEvent ae) {
-         logger.info("Edge Radio Button Listening action performed");
+         logger.info("Edge Radio Button Listening action performed" + ae.getActionCommand());
          for (int i = 0; i < jrbDataType.length; i++) {
             if (jrbDataType[i].isSelected()) {
                currentDTField.setDataType(i);
@@ -1242,7 +1248,7 @@ public class EdgeConvertGUI {
    
    class CreateDDLButtonListener implements ActionListener {
       public void actionPerformed(ActionEvent ae) {
-         logger.info("DDL Button Listener action performed");
+         logger.info("DDL Button Listener action performed" + ae.getActionCommand());
          while (outputDir == null) {
             JOptionPane.showMessageDialog(null, "You have not selected a path that contains valid output definition files yet.\nPlease select a path now.");
             setOutputDir();
@@ -1260,7 +1266,7 @@ public class EdgeConvertGUI {
 
    class EdgeMenuListener implements ActionListener {
       public void actionPerformed(ActionEvent ae) {
-         logger.info("EdgeMenu Listener action performed");
+         logger.info("EdgeMenu Listener action performed: " + ae.getActionCommand());
          int returnVal;
          if ((ae.getSource() == jmiDTOpenEdge) || (ae.getSource() == jmiDROpenEdge)) {
             if (!dataSaved) {
