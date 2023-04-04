@@ -1,9 +1,10 @@
+import java.util.Arrays;
 import java.util.StringTokenizer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class EdgeField {
-   public static Logger logger = LogManager.getLogger(EdgeField.class);
+   public static Logger logger = LogManager.getLogger(EdgeField.class.getName());
 
    private int numFigure, tableID, tableBound, fieldBound, dataType, varcharValue;
    private String name, defaultValue;
@@ -12,7 +13,7 @@ public class EdgeField {
    public static final int VARCHAR_DEFAULT_LENGTH = 1;
 
    public EdgeField(String inputString) {
-      logger.debug("Creating EdgeField with " + inputString);
+      logger.info("Creating EdgeField " + inputString);
 
       StringTokenizer st = new StringTokenizer(inputString, EdgeConvertFileParser.DELIM);
       numFigure = Integer.parseInt(st.nextToken());
@@ -40,6 +41,7 @@ public class EdgeField {
    }
 
    public void setTableID(int value) {
+      logger.info("Setting table id for field " + name + ": " + value);
       tableID = value;
    }
 
@@ -48,6 +50,7 @@ public class EdgeField {
    }
 
    public void setTableBound(int value) {
+      logger.info("Setting table bound : " + value);
       tableBound = value;
    }
 
@@ -56,6 +59,7 @@ public class EdgeField {
    }
 
    public void setFieldBound(int value) {
+      logger.info("Setting field bound : " + value);
       fieldBound = value;
    }
 
@@ -64,6 +68,7 @@ public class EdgeField {
    }
 
    public void setDisallowNull(boolean value) {
+      logger.info("Disallow null : " + value);
       disallowNull = value;
    }
 
@@ -72,6 +77,7 @@ public class EdgeField {
    }
 
    public void setIsPrimaryKey(boolean value) {
+      logger.debug("Setting as primary key? : " + value);
       isPrimaryKey = value;
    }
 
@@ -80,6 +86,7 @@ public class EdgeField {
    }
 
    public void setDefaultValue(String value) {
+      logger.debug("Setting default value : " + value);
       defaultValue = value;
    }
 
@@ -90,13 +97,14 @@ public class EdgeField {
    public void setVarcharValue(int value) {
       if (value > 0) {
          varcharValue = value;
-         logger.info("setting varcharValue to " + value);
+         logger.debug("setting varcharValue to " + value);
       } else {
          logger.warn("Varchar value " + value + " not above 0.");
       }
    }
 
    public int getDataType() {
+      logger.debug("Field data type : " + dataType);
       return dataType;
    }
 
@@ -111,6 +119,7 @@ public class EdgeField {
    }
 
    public static String[] getStrDataType() {
+      logger.debug("String data type : " + Arrays.toString(strDataType));
       return strDataType;
    }
 

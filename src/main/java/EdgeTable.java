@@ -11,7 +11,7 @@ public class EdgeTable {
    private int[] relatedTables, relatedFields, nativeFields;
 
    public EdgeTable(String inputString) {
-      logger.debug("Creating EdgeTable with " + inputString);
+      logger.info("Creating EdgeTable " + inputString);
       StringTokenizer st = new StringTokenizer(inputString, EdgeConvertFileParser.DELIM);
       numFigure = Integer.parseInt(st.nextToken());
       name = st.nextToken();
@@ -28,6 +28,7 @@ public class EdgeTable {
    }
 
    public void addRelatedTable(int relatedTable) {
+      logger.info("Adding related table " + relatedTable);
       alRelatedTables.add(new Integer(relatedTable));
    }
 
@@ -40,6 +41,7 @@ public class EdgeTable {
    }
 
    public void setRelatedField(int index, int relatedValue) {
+      logger.info("Setting related field " + index + " with value " + relatedValue);
       relatedFields[index] = relatedValue;
    }
 
@@ -48,6 +50,7 @@ public class EdgeTable {
    }
 
    public void addNativeField(int value) {
+      logger.info("Adding native field " + value);
       alNativeFields.add(new Integer(value));
    }
 
@@ -78,7 +81,6 @@ public class EdgeTable {
    }
 
    public void makeArrays() { // convert the ArrayLists into int[]
-      logger.info("Converting arraylists to int[]");
       Integer[] temp;
       temp = (Integer[]) alNativeFields.toArray(new Integer[alNativeFields.size()]);
       nativeFields = new int[temp.length];
@@ -103,29 +105,34 @@ public class EdgeTable {
       sb.append("Table: " + numFigure + "\r\n");
       sb.append("{\r\n");
       sb.append("TableName: " + name + "\r\n");
-      sb.append("NativeFields: ");
-      for (int i = 0; i < nativeFields.length; i++) {
-         sb.append(nativeFields[i]);
-         if (i < (nativeFields.length - 1)) {
-            sb.append(EdgeConvertFileParser.DELIM);
+      if (nativeFields != null) {
+         sb.append("NativeFields: ");
+         for (int i = 0; i < nativeFields.length; i++) {
+            sb.append(nativeFields[i]);
+            if (i < (nativeFields.length - 1)) {
+               sb.append(EdgeConvertFileParser.DELIM);
+            }
          }
       }
-      sb.append("\r\nRelatedTables: ");
-      for (int i = 0; i < relatedTables.length; i++) {
-         sb.append(relatedTables[i]);
-         if (i < (relatedTables.length - 1)) {
-            sb.append(EdgeConvertFileParser.DELIM);
+      if (relatedTables != null) {
+         sb.append("\r\nRelatedTables: ");
+         for (int i = 0; i < relatedTables.length; i++) {
+            sb.append(relatedTables[i]);
+            if (i < (relatedTables.length - 1)) {
+               sb.append(EdgeConvertFileParser.DELIM);
+            }
          }
       }
-      sb.append("\r\nRelatedFields: ");
-      for (int i = 0; i < relatedFields.length; i++) {
-         sb.append(relatedFields[i]);
-         if (i < (relatedFields.length - 1)) {
-            sb.append(EdgeConvertFileParser.DELIM);
+      if (relatedFields != null) {
+         sb.append("\r\nRelatedFields: ");
+         for (int i = 0; i < relatedFields.length; i++) {
+            sb.append(relatedFields[i]);
+            if (i < (relatedFields.length - 1)) {
+               sb.append(EdgeConvertFileParser.DELIM);
+            }
          }
+         sb.append("\r\n}\r\n");
       }
-      sb.append("\r\n}\r\n");
-
       return sb.toString();
    }
 }
