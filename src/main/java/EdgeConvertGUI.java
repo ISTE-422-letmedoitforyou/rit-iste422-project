@@ -852,7 +852,7 @@ public class EdgeConvertGUI {
       jbDTVarchar.setEnabled(true);
       jbDTDefaultValue.setEnabled(true);
       logger.debug("jcheck DT Primary Key: " + jcheckDTPrimaryKey);
-      logger.debug("jcheck DTDisallowNull: " + jcheckDTDisallowNull;
+      logger.debug("jcheck DTDisallowNull: " + jcheckDTDisallowNull);
       logger.debug("jbDTVarchar: " + jbDTVarchar);
       logger.debug("jbDTDefaultValue: " + jbDTDefaultValue);
    }
@@ -868,7 +868,7 @@ public class EdgeConvertGUI {
       jtfDTVarchar.setText("");
       jtfDTDefaultValue.setText("");
       logger.debug("jcheck DT Primary Key: " + jcheckDTPrimaryKey);
-      logger.debug("jcheck DTDisallowNull: " + jcheckDTDisallowNull;
+      logger.debug("jcheck DTDisallowNull: " + jcheckDTDisallowNull);
       logger.debug("jbDTDefaultValue: " + jbDTDefaultValue);
       logger.debug("jtfDTVarchar: " + jtfDTVarchar);
       logger.debug("jtfDTDefaultValue: " + jtfDTDefaultValue);
@@ -1180,8 +1180,8 @@ public class EdgeConvertGUI {
    }
    
    class EdgeRadioButtonListener implements ActionListener {
-      logger.info("Edge Radio Button Listening");
       public void actionPerformed(ActionEvent ae) {
+         logger.info("Edge Radio Button Listening action performed");
          for (int i = 0; i < jrbDataType.length; i++) {
             if (jrbDataType[i].isSelected()) {
                currentDTField.setDataType(i);
@@ -1202,7 +1202,7 @@ public class EdgeConvertGUI {
    }
    
    class EdgeWindowListener implements WindowListener {
-      logger.info("Window Listening");
+      
       public void windowActivated(WindowEvent we) {}
       public void windowClosed(WindowEvent we) {}
       public void windowDeactivated(WindowEvent we) {}
@@ -1211,6 +1211,7 @@ public class EdgeConvertGUI {
       public void windowOpened(WindowEvent we) {}
       
       public void windowClosing(WindowEvent we) {
+         logger.info("Window Listening");
          if (!dataSaved) {
             int answer = JOptionPane.showOptionDialog(null,
                 "You currently have unsaved data. Would you like to save?",
@@ -1242,8 +1243,8 @@ public class EdgeConvertGUI {
    }
    
    class CreateDDLButtonListener implements ActionListener {
-      logger.info("creating DDL Button Listener");
       public void actionPerformed(ActionEvent ae) {
+         logger.info("DDL Button Listener action performed");
          while (outputDir == null) {
             JOptionPane.showMessageDialog(null, "You have not selected a path that contains valid output definition files yet.\nPlease select a path now.");
             setOutputDir();
@@ -1260,8 +1261,8 @@ public class EdgeConvertGUI {
    }
 
    class EdgeMenuListener implements ActionListener {
-      logger.info("creating EdgeMenu Listener");
       public void actionPerformed(ActionEvent ae) {
+         logger.info("EdgeMenu Listener action performed");
          int returnVal;
          if ((ae.getSource() == jmiDTOpenEdge) || (ae.getSource() == jmiDROpenEdge)) {
             if (!dataSaved) {
