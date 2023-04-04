@@ -365,7 +365,7 @@ public class EdgeConvertFileParser {
                br.close();
                this.makeArrays(); // convert ArrayList objects into arrays of the appropriate Class type
             } else { // the file chosen is something else
-               logger.warn("Cannot parse " + inputFile + " because of unrecognized file format.");
+               logger.error("Cannot parse " + inputFile + " because of unrecognized file format.");
                JOptionPane.showMessageDialog(null, "Unrecognized file format");
             }
          }

@@ -77,23 +77,25 @@ public class EdgeField {
    }
 
    public void setDisallowNull(boolean value) {
-      logger.info("Setting disallow null");
+      logger.info("Setting disallow null : " + value);
       logger.debug("Disallow null is now set to " + value);
       disallowNull = value;
    }
 
    public boolean getIsPrimaryKey() {
-      logger.info("Is primary key? : " + isPrimaryKey);
+      logger.info("Primary key : " + isPrimaryKey);
       return isPrimaryKey;
    }
 
    public void setIsPrimaryKey(boolean value) {
-      logger.debug("Setting as primary key? " + value);
+      logger.info("Setting primary key to " + value);
+      logger.debug("Primary key now set to " + value);
       isPrimaryKey = value;
    }
 
    public String getDefaultValue() {
-      logger.info("Default value is set to : " + defaultValue);
+      String reporting = defaultValue.equals("") ? defaultValue : "none";
+      logger.info("Default value is set " + reporting);
       return defaultValue;
    }
 
