@@ -93,9 +93,10 @@ public class EdgeConvertGUI {
    } // EdgeConvertGUI.EdgeConvertGUI()
 
    public void showGUI() {
+      logger.info("showing GUI");
       try {
-         UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); // use the OS native LAF, as opposed to
-                                                                              // default Java LAF
+         UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); //use the OS native LAF, as opposed to default Java LAF
+         logger.info("setting UI");
       } catch (Exception e) {
          logger.error("Error setting native LAF: " + e);
       }
@@ -104,6 +105,11 @@ public class EdgeConvertGUI {
    } // showGUI()
 
    public void createDTScreen() {// create Define Tables screen
+      logger.info("GUI is shown");
+   } //showGUI()
+
+   public void createDTScreen() {//create Define Tables screen
+      logger.info("creating DTS screen");
       jfDT = new JFrame(DEFINE_TABLES);
       jfDT.setLocation(HORIZ_LOC, VERT_LOC);
       Container cp = jfDT.getContentPane();
@@ -113,7 +119,9 @@ public class EdgeConvertGUI {
       jfDT.setVisible(true);
       jfDT.setSize(HORIZ_SIZE + 150, VERT_SIZE);
 
-      // setup menubars and menus
+
+      //setup menubars and menus
+      logger.info("setting up DT menubars and menus");
       jmbDTMenuBar = new JMenuBar();
       jfDT.setJMenuBar(jmbDTMenuBar);
 
@@ -491,7 +499,8 @@ public class EdgeConvertGUI {
    } // createDTScreen
 
    public void createDRScreen() {
-      // create Define Relations screen
+      //create Define Relations screen
+      logger.info("creating Define Relations Screen");
       jfDR = new JFrame(DEFINE_RELATIONS);
       jfDR.setSize(HORIZ_SIZE, VERT_SIZE);
       jfDR.setLocation(HORIZ_LOC, VERT_LOC);
@@ -499,7 +508,8 @@ public class EdgeConvertGUI {
       jfDR.addWindowListener(edgeWindowListener);
       jfDR.getContentPane().setLayout(new BorderLayout());
 
-      // setup menubars and menus
+      //setup menubars and menus
+      logger.info("setting up DR menubars and menus");
       jmbDRMenuBar = new JMenuBar();
       jfDR.setJMenuBar(jmbDRMenuBar);
       jmDRFile = new JMenu("File");
@@ -528,6 +538,7 @@ public class EdgeConvertGUI {
       jmDRFile.add(jmiDRSaveAs);
       jmDRFile.add(jmiDRExit);
 
+      logger.info("Setting Options Menu");
       jmDROptions = new JMenu("Options");
       jmDROptions.setMnemonic(KeyEvent.VK_O);
       jmbDRMenuBar.add(jmDROptions);
@@ -541,6 +552,7 @@ public class EdgeConvertGUI {
       jmDROptions.add(jmiDROptionsOutputLocation);
       jmDROptions.add(jmiDROptionsShowProducts);
 
+      logger.info("Setting Help Menu");
       jmDRHelp = new JMenu("Help");
       jmDRHelp.setMnemonic(KeyEvent.VK_H);
       jmbDRMenuBar.add(jmDRHelp);
@@ -747,70 +759,87 @@ public class EdgeConvertGUI {
    } // createDRScreen
 
    public static void setReadSuccess(boolean value) {
+      logger.info("setting read success");
+      logger.debug("readSuccess: " + value);
       readSuccess = value;
    }
 
    public static boolean getReadSuccess() {
+      logger.info("getting ReadSucess:" + readSuccess);
       return readSuccess;
    }
 
    private void setCurrentDTTable(String selText) {
+      logger.info("setting Current DTTable");
       for (int tIndex = 0; tIndex < tables.length; tIndex++) {
          if (selText.equals(tables[tIndex].getName())) {
             currentDTTable = tables[tIndex];
+            logger.debug("Current DTTable" + currentDTTable);
             return;
          }
       }
    }
 
    private void setCurrentDTField(String selText) {
+      logger.info("setting current DT Field");
       for (int fIndex = 0; fIndex < fields.length; fIndex++) {
          if (selText.equals(fields[fIndex].getName()) && fields[fIndex].getTableID() == currentDTTable.getNumFigure()) {
             currentDTField = fields[fIndex];
+            logger.debug("Current DT Field: " + currentDTField);
             return;
          }
       }
    }
 
    private void setCurrentDRTable1(String selText) {
+      logger.info("setting Current DR Table1");
       for (int tIndex = 0; tIndex < tables.length; tIndex++) {
          if (selText.equals(tables[tIndex].getName())) {
             currentDRTable1 = tables[tIndex];
+            logger.debug("Current DR Table1: " + currentDRTable1);
             return;
          }
       }
    }
 
    private void setCurrentDRTable2(String selText) {
+      logger.info("setting CurrentDRTable2");
       for (int tIndex = 0; tIndex < tables.length; tIndex++) {
          if (selText.equals(tables[tIndex].getName())) {
             currentDRTable2 = tables[tIndex];
+            logger.debug("Current DR Table2: " + currentDRTable2);
             return;
          }
       }
    }
 
    private void setCurrentDRField1(String selText) {
+      logger.info("setting CurrentDRField1");
       for (int fIndex = 0; fIndex < fields.length; fIndex++) {
          if (selText.equals(fields[fIndex].getName()) &&
                fields[fIndex].getTableID() == currentDRTable1.getNumFigure()) {
             currentDRField1 = fields[fIndex];
+            logger.debug("current DR Field1: " + currentDRField1);
             return;
          }
       }
+      
    }
 
    private void setCurrentDRField2(String selText) {
+      logger.info("setting Current DR Field2");
       for (int fIndex = 0; fIndex < fields.length; fIndex++) {
          if (selText.equals(fields[fIndex].getName()) &&
                fields[fIndex].getTableID() == currentDRTable2.getNumFigure()) {
             currentDRField2 = fields[fIndex];
+            logger.debug("Current DR Field2" + currentDRField2);
             return;
          }
       }
    }
 
    private String getTableName(int numFigure) {
+      logger.info("getting TableName");
       for (int tIndex = 0; tIndex < tables.length; tIndex++) {
          if (tables[tIndex].getNumFigure() == numFigure) {
             return tables[tIndex].getName();
@@ -820,6 +849,7 @@ public class EdgeConvertGUI {
    }
 
    private String getFieldName(int numFigure) {
+      logger.info("getting FieldName");
       for (int fIndex = 0; fIndex < fields.length; fIndex++) {
          if (fields[fIndex].getNumFigure() == numFigure) {
             return fields[fIndex].getName();
@@ -829,6 +859,7 @@ public class EdgeConvertGUI {
    }
 
    private void enableControls() {
+      logger.info("enabling Controls");
       for (int i = 0; i < strDataType.length; i++) {
          jrbDataType[i].setEnabled(true);
       }
@@ -836,9 +867,14 @@ public class EdgeConvertGUI {
       jcheckDTDisallowNull.setEnabled(true);
       jbDTVarchar.setEnabled(true);
       jbDTDefaultValue.setEnabled(true);
+      logger.debug("jcheck DT Primary Key: " + jcheckDTPrimaryKey);
+      logger.debug("jcheck DTDisallowNull: " + jcheckDTDisallowNull);
+      logger.debug("jbDTVarchar: " + jbDTVarchar);
+      logger.debug("jbDTDefaultValue: " + jbDTDefaultValue);
    }
 
    private void disableControls() {
+      logger.info("disabling controls");
       for (int i = 0; i < strDataType.length; i++) {
          jrbDataType[i].setEnabled(false);
       }
@@ -847,30 +883,52 @@ public class EdgeConvertGUI {
       jbDTDefaultValue.setEnabled(false);
       jtfDTVarchar.setText("");
       jtfDTDefaultValue.setText("");
+      logger.debug("jcheck DT Primary Key: " + jcheckDTPrimaryKey);
+      logger.debug("jcheck DTDisallowNull: " + jcheckDTDisallowNull);
+      logger.debug("jbDTDefaultValue: " + jbDTDefaultValue);
+      logger.debug("jtfDTVarchar: " + jtfDTVarchar);
+      logger.debug("jtfDTDefaultValue: " + jtfDTDefaultValue);
    }
 
    private void clearDTControls() {
+      logger.info("clearing DT Controls");
       jlDTTablesAll.clearSelection();
       jlDTFieldsTablesAll.clearSelection();
+      logger.debug("jlDTTablesAll: " + jlDTTablesAll);
+      logger.debug("jlDTFieldsTablesAll: " + jlDTFieldsTablesAll);
    }
 
    private void clearDRControls() {
+      logger.info("clearing DR Controls");
       jlDRTablesRelations.clearSelection();
       jlDRTablesRelatedTo.clearSelection();
       jlDRFieldsTablesRelations.clearSelection();
       jlDRFieldsTablesRelatedTo.clearSelection();
+      logger.debug("jlDRTablesRelations: " + jlDRTablesRelations);
+      logger.debug("jlDRTablesRelatedTo: " + jlDRTablesRelatedTo);
+      logger.debug("jlDRFieldsTablesRelations: " + jlDRFieldsTablesRelations);
+      logger.debug("jlDRFieldsTablesRelatedTo: " + jlDRFieldsTablesRelatedTo);
    }
 
    private void depopulateLists() {
+      logger.info("depopulating Lists");
       dlmDTTablesAll.clear();
       dlmDTFieldsTablesAll.clear();
       dlmDRTablesRelations.clear();
       dlmDRFieldsTablesRelations.clear();
       dlmDRTablesRelatedTo.clear();
       dlmDRFieldsTablesRelatedTo.clear();
+      logger.debug("dlmDTTablesAll: " + dlmDTTablesAll);
+      logger.debug("dlmDTFieldsTablesAll: " + dlmDTFieldsTablesAll);
+      logger.debug("dlmDRTablesRelations: " + dlmDRTablesRelations);
+      logger.debug("dlmDRFieldsTablesRelations: " + dlmDRFieldsTablesRelations);
+      logger.debug("dlmDRTablesRelatedTo: " + dlmDRTablesRelatedTo);
+      logger.debug("dlmDRFieldsTablesRelatedTo: " + dlmDRFieldsTablesRelatedTo);
    }
 
    private void populateLists() {
+      logger.info("populating Lists");
+      logger.debug("readSuccess" + readSuccess);
       if (readSuccess) {
          jfDT.setVisible(true);
          jfDR.setVisible(false);
@@ -889,17 +947,20 @@ public class EdgeConvertGUI {
    }
 
    private void saveAs() {
+      logger.info("Saving As");
       int returnVal;
       jfcEdge.addChoosableFileFilter(effSave);
       returnVal = jfcEdge.showSaveDialog(null);
       if (returnVal == JFileChooser.APPROVE_OPTION) {
          saveFile = jfcEdge.getSelectedFile();
-         if (saveFile.exists()) {
-            int response = JOptionPane.showConfirmDialog(null, "Overwrite existing file?", "Confirm Overwrite",
-                  JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
-            if (response == JOptionPane.CANCEL_OPTION) {
-               return;
-            }
+         if (saveFile.exists ()) {
+             int response = JOptionPane.showConfirmDialog(null, "Overwrite existing file?", "Confirm Overwrite",
+                JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+                logger.info("File Overwritten");
+             if (response == JOptionPane.CANCEL_OPTION) {
+                logger.info("File Canceled");
+                return;
+             }
          }
          if (!saveFile.getName().endsWith("sav")) {
             String temp = saveFile.getAbsolutePath() + ".sav";
@@ -913,9 +974,11 @@ public class EdgeConvertGUI {
          return;
       }
       writeSave();
+      
    }
 
    private void writeSave() {
+      logger.info("Writing Save");
       if (saveFile != null) {
          try {
             pw = new PrintWriter(new BufferedWriter(new FileWriter(saveFile, false)));
@@ -938,10 +1001,12 @@ public class EdgeConvertGUI {
          }
          logger.info("Saving data");
          dataSaved = true;
+         logger.info("File Saved");
       }
    }
 
    private void setOutputDir() {
+      logger.info("Setting Output Dir");
       int returnVal;
       outputDirOld = outputDir;
       alSubclasses = new ArrayList();
@@ -949,6 +1014,10 @@ public class EdgeConvertGUI {
 
       returnVal = jfcOutputDir.showOpenDialog(null);
 
+
+      logger.debug("returnVal: " + returnVal);
+      logger.debug("outputDirOld: " + outputDirOld);
+      
       if (returnVal == JFileChooser.CANCEL_OPTION) {
          return;
       }
@@ -971,22 +1040,27 @@ public class EdgeConvertGUI {
          jbDRCreateDDL.setEnabled(true);
       }
 
-      JOptionPane.showMessageDialog(null,
-            "The available products to create DDL statements are:\n" + displayProductNames());
+      logger.debug("outputDir: " + outputDir);
+
+      JOptionPane.showMessageDialog(null, "The available products to create DDL statements are:\n" + displayProductNames());
       jmiDTOptionsShowProducts.setEnabled(true);
       jmiDROptionsShowProducts.setEnabled(true);
    }
 
    private String displayProductNames() {
+      logger.info("Displaying Product Names");
       StringBuffer sb = new StringBuffer();
       for (int i = 0; i < productNames.length; i++) {
          sb.append(productNames[i] + "\n");
       }
+      logger.debug("Product Names: " + sb.toString());
       return sb.toString();
    }
 
    private void getOutputClasses() {
+      logger.info("getting output classes");
       File[] resultFiles = {};
+      logger.debug("Files for output class: " + resultFiles);
       Class resultClass = null;
       Class[] paramTypes = { EdgeTable[].class, EdgeField[].class };
       Class[] paramTypesNull = {};
@@ -996,19 +1070,21 @@ public class EdgeConvertGUI {
 
       String classLocation = EdgeConvertGUI.class.getResource("EdgeConvertGUI.class").toString();
       if (classLocation.startsWith("jar:")) {
-         String jarfilename = classLocation.replaceFirst("^.*:", "").replaceFirst("!.*$", "");
-         logger.info("Jarfile: " + jarfilename);
-         try (JarFile jarfile = new JarFile(jarfilename)) {
-            ArrayList<File> filenames = new ArrayList<>();
-            for (JarEntry e : Collections.list(jarfile.entries())) {
-               filenames.add(new File(e.getName()));
-            }
-            resultFiles = filenames.toArray(new File[0]);
-         } catch (IOException ioe) {
-            throw new RuntimeException(ioe);
-         }
-      } else {
-         resultFiles = outputDir.listFiles();
+          String jarfilename = classLocation.replaceFirst("^.*:", "").replaceFirst("!.*$", "");
+          System.out.println("Jarfile: " + jarfilename);
+          logger.info("Jarfile: " + jarfilename);
+          try (JarFile jarfile = new JarFile(jarfilename)) {
+              ArrayList<File> filenames = new ArrayList<>();
+              for (JarEntry e : Collections.list(jarfile.entries())) {
+                  filenames.add(new File(e.getName()));
+              }
+              resultFiles = filenames.toArray(new File[0]);
+          } catch (IOException ioe) {
+              throw new RuntimeException(ioe);
+          }
+      } 
+      else {
+          resultFiles = outputDir.listFiles();
       }
       alProductNames.clear();
       alSubclasses.clear();
@@ -1056,6 +1132,7 @@ public class EdgeConvertGUI {
    }
 
    private String getSQLStatements() {
+      logger.info("getting SQL statements");
       String strSQLString = "";
       String response = (String) JOptionPane.showInputDialog(
             null,
@@ -1095,6 +1172,7 @@ public class EdgeConvertGUI {
    }
 
    private void writeSQL(String output) {
+      logger.info("writing SQL");
       jfcEdge.resetChoosableFileFilters();
       String str;
       if (parseFile != null) {
@@ -1127,13 +1205,14 @@ public class EdgeConvertGUI {
             // close the file
             pw.close();
          } catch (IOException ioe) {
-            logger.error("IOException Found : " + ioe);
+            logger.error("IO Exception Found : " + ioe);
          }
       }
    }
 
    class EdgeRadioButtonListener implements ActionListener {
       public void actionPerformed(ActionEvent ae) {
+         logger.info("Edge Radio Button Listening action performed" + ae.getActionCommand());
          for (int i = 0; i < jrbDataType.length; i++) {
             if (jrbDataType[i].isSelected()) {
                currentDTField.setDataType(i);
@@ -1154,37 +1233,30 @@ public class EdgeConvertGUI {
    }
 
    class EdgeWindowListener implements WindowListener {
-      public void windowActivated(WindowEvent we) {
-      }
-
-      public void windowClosed(WindowEvent we) {
-      }
-
-      public void windowDeactivated(WindowEvent we) {
-      }
-
-      public void windowDeiconified(WindowEvent we) {
-      }
-
-      public void windowIconified(WindowEvent we) {
-      }
-
-      public void windowOpened(WindowEvent we) {
-      }
-
+      
+      public void windowActivated(WindowEvent we) {}
+      public void windowClosed(WindowEvent we) {}
+      public void windowDeactivated(WindowEvent we) {}
+      public void windowDeiconified(WindowEvent we) {}
+      public void windowIconified(WindowEvent we) {}
+      public void windowOpened(WindowEvent we) {}
+      
       public void windowClosing(WindowEvent we) {
+         logger.info("Window Listening");
          if (!dataSaved) {
             int answer = JOptionPane.showOptionDialog(null,
-                  "You currently have unsaved data. Would you like to save?",
-                  "Are you sure?",
-                  JOptionPane.YES_NO_CANCEL_OPTION,
-                  JOptionPane.QUESTION_MESSAGE,
-                  null, null, null);
+                "You currently have unsaved data. Would you like to save?",
+                "Are you sure?",
+                JOptionPane.YES_NO_CANCEL_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null, null, null);
+            logger.debug("Window Answer:" + answer);
             if (answer == JOptionPane.YES_OPTION) {
                if (saveFile == null) {
                   saveAs();
                }
                writeSave();
+               logger.info("Saving data");
             }
             if ((answer == JOptionPane.CANCEL_OPTION) || (answer == JOptionPane.CLOSED_OPTION)) {
                if (we.getSource() == jfDT) {
@@ -1196,20 +1268,23 @@ public class EdgeConvertGUI {
                return;
             }
          }
-         System.exit(0); // No was selected
+         System.exit(0); //No was selected
+         logger.info("Data not saved");
       }
    }
 
    class CreateDDLButtonListener implements ActionListener {
       public void actionPerformed(ActionEvent ae) {
+         logger.info("DDL Button Listener action performed" + ae.getActionCommand());
          while (outputDir == null) {
             JOptionPane.showMessageDialog(null,
                   "You have not selected a path that contains valid output definition files yet.\nPlease select a path now.");
             setOutputDir();
          }
-         getOutputClasses(); // in case outputDir was set before a file was loaded and EdgeTable/EdgeField
-                             // objects created
+         getOutputClasses(); //in case outputDir was set before a file was loaded and EdgeTable/EdgeField objects created
+         logger.debug("Output Dir: " + outputDir);
          sqlString = getSQLStatements();
+         logger.info("sqlString: " + sqlString);
          if (sqlString.equals(EdgeConvertGUI.CANCELLED)) {
             return;
          }
@@ -1219,6 +1294,7 @@ public class EdgeConvertGUI {
 
    class EdgeMenuListener implements ActionListener {
       public void actionPerformed(ActionEvent ae) {
+         logger.info("EdgeMenu Listener action performed: " + ae.getActionCommand());
          int returnVal;
          if ((ae.getSource() == jmiDTOpenEdge) || (ae.getSource() == jmiDROpenEdge)) {
             if (!dataSaved) {

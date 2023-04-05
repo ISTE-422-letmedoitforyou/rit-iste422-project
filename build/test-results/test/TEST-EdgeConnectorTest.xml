@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EdgeConnectorTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2023-04-03T05:51:57" hostname="Catherines-MacBook-Pro-3.local" time="0.549">
+<testsuite name="EdgeConnectorTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2023-04-04T21:42:22" hostname="Catherines-MacBook-Pro-3.local" time="0.254">
   <properties/>
-  <testcase name="testGetEndPoint1" classname="EdgeConnectorTest" time="0.535"/>
+  <testcase name="testGetEndPoint1" classname="EdgeConnectorTest" time="0.247"/>
   <testcase name="testGetEndPoint2" classname="EdgeConnectorTest" time="0.001"/>
-  <testcase name="testGetEndStyle1" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testGetEndStyle1" classname="EdgeConnectorTest" time="0.0"/>
   <testcase name="testGetEndStyle2" classname="EdgeConnectorTest" time="0.001"/>
-  <testcase name="testGetNumConnector" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testGetNumConnector" classname="EdgeConnectorTest" time="0.0"/>
   <testcase name="testGetIsEP1Field" classname="EdgeConnectorTest" time="0.001"/>
   <testcase name="testGetIsEP1Table" classname="EdgeConnectorTest" time="0.0"/>
   <testcase name="testGetIsEP2Field" classname="EdgeConnectorTest" time="0.001"/>
-  <testcase name="testGetIsEP2Table" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testGetIsEP2Table" classname="EdgeConnectorTest" time="0.0"/>
   <testcase name="testSetIsEP1Field" classname="EdgeConnectorTest" time="0.001"/>
-  <testcase name="testSetIsEP1Table" classname="EdgeConnectorTest" time="0.002"/>
-  <testcase name="testSetIsEP2Field" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testSetIsEP1Table" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testSetIsEP2Field" classname="EdgeConnectorTest" time="0.0"/>
   <testcase name="testSetIsEP2Table" classname="EdgeConnectorTest" time="0.001"/>
-  <system-out><![CDATA[01:51:57.893 [Test worker] INFO  timer.EdgeConnector - start _init
-01:51:57.896 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-01:51:57.896 [Test worker] INFO  timer.EdgeConnector - end _init
-01:51:57.897 [Test worker] INFO  EdgeConnector - Getting EndPoint1: 2
-01:51:57.898 [Test worker] INFO  timer.EdgeConnector - start _init
-01:51:57.898 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-01:51:57.898 [Test worker] INFO  timer.EdgeConnector - end _init
-01:51:57.899 [Test worker] INFO  EdgeConnector - Getting EndPoint2: 3
-01:51:57.899 [Test worker] INFO  timer.EdgeConnector - start _init
-01:51:57.899 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-01:51:57.899 [Test worker] INFO  timer.EdgeConnector - end _init
-01:51:57.900 [Test worker] INFO  EdgeConnector - Getting EndStyle1: testStyle1
-01:51:57.900 [Test worker] INFO  timer.EdgeConnector - start _init
-01:51:57.900 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-01:51:57.900 [Test worker] INFO  timer.EdgeConnector - end _init
-01:51:57.901 [Test worker] INFO  EdgeConnector - Getting EndStyle2: testStyle2
-01:51:57.901 [Test worker] INFO  timer.EdgeConnector - start _init
-01:51:57.901 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-01:51:57.901 [Test worker] INFO  timer.EdgeConnector - end _init
-01:51:57.901 [Test worker] INFO  EdgeConnector - Getting Num Connector1
-01:51:57.902 [Test worker] INFO  timer.EdgeConnector - start _init
-01:51:57.902 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-01:51:57.902 [Test worker] INFO  timer.EdgeConnector - end _init
-01:51:57.902 [Test worker] INFO  EdgeConnector - Getting IsEP1Field: false
-01:51:57.903 [Test worker] INFO  timer.EdgeConnector - start _init
-01:51:57.903 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-01:51:57.903 [Test worker] INFO  timer.EdgeConnector - end _init
-01:51:57.903 [Test worker] INFO  EdgeConnector - Getting IsEP1Table: false
-01:51:57.904 [Test worker] INFO  timer.EdgeConnector - start _init
-01:51:57.904 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-01:51:57.904 [Test worker] INFO  timer.EdgeConnector - end _init
-01:51:57.904 [Test worker] INFO  EdgeConnector - Getting IsEP2Field: false
-01:51:57.905 [Test worker] INFO  timer.EdgeConnector - start _init
-01:51:57.905 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-01:51:57.905 [Test worker] INFO  timer.EdgeConnector - end _init
-01:51:57.906 [Test worker] INFO  EdgeConnector - Getting IsEP2Table: false
-01:51:57.906 [Test worker] INFO  timer.EdgeConnector - start _init
-01:51:57.906 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-01:51:57.906 [Test worker] INFO  timer.EdgeConnector - end _init
-01:51:57.907 [Test worker] INFO  EdgeConnector - Setting IsEP1Field 
-01:51:57.907 [Test worker] DEBUG EdgeConnector - Setting to ... false
-01:51:57.907 [Test worker] INFO  EdgeConnector - Getting IsEP1Field: false
-01:51:57.907 [Test worker] INFO  timer.EdgeConnector - start _init
-01:51:57.907 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-01:51:57.908 [Test worker] INFO  timer.EdgeConnector - end _init
-01:51:57.908 [Test worker] INFO  EdgeConnector - Setting IsEP1Table 
-01:51:57.908 [Test worker] DEBUG EdgeConnector - Setting to ... false
-01:51:57.909 [Test worker] INFO  EdgeConnector - Getting IsEP1Table: false
-01:51:57.909 [Test worker] INFO  timer.EdgeConnector - start _init
-01:51:57.909 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-01:51:57.909 [Test worker] INFO  timer.EdgeConnector - end _init
-01:51:57.910 [Test worker] INFO  EdgeConnector - Setting IsEP2Field 
-01:51:57.910 [Test worker] DEBUG EdgeConnector - Setting to ... false
-01:51:57.910 [Test worker] INFO  EdgeConnector - Getting IsEP2Field: false
-01:51:57.910 [Test worker] INFO  timer.EdgeConnector - start _init
-01:51:57.910 [Test worker] INFO  timer.EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-01:51:57.910 [Test worker] INFO  timer.EdgeConnector - end _init
-01:51:57.911 [Test worker] INFO  EdgeConnector - Setting IsEP2Table 
-01:51:57.911 [Test worker] DEBUG EdgeConnector - Setting to ... false
-01:51:57.911 [Test worker] INFO  EdgeConnector - Getting IsEP2Table: false
+  <system-out><![CDATA[17:42:22.419 [Test worker] INFO  timer.EdgeConnector - start _init
+17:42:22.421 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+17:42:22.421 [Test worker] INFO  timer.EdgeConnector - end _init
+17:42:22.422 [Test worker] INFO  EdgeConnector - Getting EndPoint1: 2
+17:42:22.422 [Test worker] INFO  timer.EdgeConnector - start _init
+17:42:22.422 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+17:42:22.422 [Test worker] INFO  timer.EdgeConnector - end _init
+17:42:22.423 [Test worker] INFO  EdgeConnector - Getting EndPoint2: 3
+17:42:22.423 [Test worker] INFO  timer.EdgeConnector - start _init
+17:42:22.423 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+17:42:22.423 [Test worker] INFO  timer.EdgeConnector - end _init
+17:42:22.423 [Test worker] INFO  EdgeConnector - Getting EndStyle1: testStyle1
+17:42:22.423 [Test worker] INFO  timer.EdgeConnector - start _init
+17:42:22.424 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+17:42:22.424 [Test worker] INFO  timer.EdgeConnector - end _init
+17:42:22.424 [Test worker] INFO  EdgeConnector - Getting EndStyle2: testStyle2
+17:42:22.424 [Test worker] INFO  timer.EdgeConnector - start _init
+17:42:22.424 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+17:42:22.424 [Test worker] INFO  timer.EdgeConnector - end _init
+17:42:22.424 [Test worker] INFO  EdgeConnector - Getting Num Connector1
+17:42:22.424 [Test worker] INFO  timer.EdgeConnector - start _init
+17:42:22.424 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+17:42:22.424 [Test worker] INFO  timer.EdgeConnector - end _init
+17:42:22.425 [Test worker] INFO  EdgeConnector - Getting IsEP1Field: false
+17:42:22.425 [Test worker] INFO  timer.EdgeConnector - start _init
+17:42:22.425 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+17:42:22.425 [Test worker] INFO  timer.EdgeConnector - end _init
+17:42:22.425 [Test worker] INFO  EdgeConnector - Getting IsEP1Table: false
+17:42:22.426 [Test worker] INFO  timer.EdgeConnector - start _init
+17:42:22.426 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+17:42:22.426 [Test worker] INFO  timer.EdgeConnector - end _init
+17:42:22.426 [Test worker] INFO  EdgeConnector - Getting IsEP2Field: false
+17:42:22.426 [Test worker] INFO  timer.EdgeConnector - start _init
+17:42:22.426 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+17:42:22.426 [Test worker] INFO  timer.EdgeConnector - end _init
+17:42:22.426 [Test worker] INFO  EdgeConnector - Getting IsEP2Table: false
+17:42:22.427 [Test worker] INFO  timer.EdgeConnector - start _init
+17:42:22.427 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+17:42:22.427 [Test worker] INFO  timer.EdgeConnector - end _init
+17:42:22.427 [Test worker] INFO  EdgeConnector - Setting IsEP1Field 
+17:42:22.427 [Test worker] DEBUG EdgeConnector - Setting to ... false
+17:42:22.427 [Test worker] INFO  EdgeConnector - Getting IsEP1Field: false
+17:42:22.427 [Test worker] INFO  timer.EdgeConnector - start _init
+17:42:22.427 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+17:42:22.427 [Test worker] INFO  timer.EdgeConnector - end _init
+17:42:22.428 [Test worker] INFO  EdgeConnector - Setting IsEP1Table 
+17:42:22.428 [Test worker] DEBUG EdgeConnector - Setting to ... false
+17:42:22.428 [Test worker] INFO  EdgeConnector - Getting IsEP1Table: false
+17:42:22.428 [Test worker] INFO  timer.EdgeConnector - start _init
+17:42:22.428 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+17:42:22.428 [Test worker] INFO  timer.EdgeConnector - end _init
+17:42:22.428 [Test worker] INFO  EdgeConnector - Setting IsEP2Field 
+17:42:22.428 [Test worker] DEBUG EdgeConnector - Setting to ... false
+17:42:22.428 [Test worker] INFO  EdgeConnector - Getting IsEP2Field: false
+17:42:22.428 [Test worker] INFO  timer.EdgeConnector - start _init
+17:42:22.429 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+17:42:22.429 [Test worker] INFO  timer.EdgeConnector - end _init
+17:42:22.429 [Test worker] INFO  EdgeConnector - Setting IsEP2Table 
+17:42:22.429 [Test worker] DEBUG EdgeConnector - Setting to ... false
+17:42:22.429 [Test worker] INFO  EdgeConnector - Getting IsEP2Table: false
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
