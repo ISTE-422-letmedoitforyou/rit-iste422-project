@@ -6,20 +6,8 @@
         </Console>
         <File name="MyFile" fileName="runner.log" immediateFlush="true" append="false">
             <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-        </File>
-
-
-        <File name="EdgeConvertFileParser" fileName="runner.log" immediateFlush="true" append="false">
-            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-        </File>
-		<File name="EdgeTable" fileName="runner.log" immediateFlush="true" append="false">
-			<PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-		</File>
-		<File name="EdgeField" fileName="runner.log" immediateFlush="true" append="false">
-			<PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-		</File>
-
-        
+            <ThresholdFilter level="INFO" onMatch="DENY" onMismatch="NEUTRAL"/>
+        </File>        
         <File name="Timer" fileName="timer.log" immediateFlush="true" append="true">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %logger{36} - %msg%n"/>
         </File>
@@ -29,25 +17,6 @@
             <AppenderRef ref="Console" level="info"/>
             <AppenderRef ref="MyFile" level="debug"/>
             <AppenderRef ref="Timer" level="off"/>
-
-            <AppenderRef ref="EdgeConvertFileParser" level="info"/>
-			<AppenderRef ref="EdgeTable" level="info"/>
-			<AppenderRef ref="EdgeField" level="info"/>
         </Root>
-
-
-        <Logger name="RunEdgeConvert" level="debug" additivity="false">
-        </Logger>
-
-        <Logger name="EdgeConvertFileParser" level="debug" additivity="false">
-        </Logger>
-		<Logger name="EdgeTable" level="debug" additivity="false">
-		</Logger>
-		<Logger name="EdgeField" level="debug" additivity="false">
-		</Logger>
-
-        <Logger name="timer" level="info" additivity="false">
-            <AppenderRef ref="Timer"/>
-        </Logger>
     </Loggers>
 </Configuration>

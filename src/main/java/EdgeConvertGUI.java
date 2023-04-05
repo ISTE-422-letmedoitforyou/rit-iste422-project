@@ -75,7 +75,8 @@ public class EdgeConvertGUI {
    static JList jlDRTablesRelations, jlDRTablesRelatedTo, jlDRFieldsTablesRelations, jlDRFieldsTablesRelatedTo;
    static DefaultListModel dlmDRTablesRelations, dlmDRTablesRelatedTo, dlmDRFieldsTablesRelations,
          dlmDRFieldsTablesRelatedTo;
-   static JLabel jlabDRTablesRelations, jlabDRTablesRelatedTo, jlabDRFieldsTablesRelations, jlabDRFieldsTablesRelatedTo;
+   static JLabel jlabDRTablesRelations, jlabDRTablesRelatedTo, jlabDRFieldsTablesRelations,
+         jlabDRFieldsTablesRelatedTo;
    static JScrollPane jspDRTablesRelations, jspDRTablesRelatedTo, jspDRFieldsTablesRelations,
          jspDRFieldsTablesRelatedTo;
    static JMenuBar jmbDRMenuBar;
@@ -95,20 +96,18 @@ public class EdgeConvertGUI {
    public void showGUI() {
       logger.info("showing GUI");
       try {
-         UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); //use the OS native LAF, as opposed to default Java LAF
+         UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); // use the OS native LAF, as opposed to
+                                                                              // default Java LAF
          logger.info("setting UI");
       } catch (Exception e) {
          logger.error("Error setting native LAF: " + e);
       }
       createDTScreen();
       createDRScreen();
+      logger.info("GUI is shown");
    } // showGUI()
 
    public void createDTScreen() {// create Define Tables screen
-      logger.info("GUI is shown");
-   } //showGUI()
-
-   public void createDTScreen() {//create Define Tables screen
       logger.info("creating DTS screen");
       jfDT = new JFrame(DEFINE_TABLES);
       jfDT.setLocation(HORIZ_LOC, VERT_LOC);
@@ -119,8 +118,7 @@ public class EdgeConvertGUI {
       jfDT.setVisible(true);
       jfDT.setSize(HORIZ_SIZE + 150, VERT_SIZE);
 
-
-      //setup menubars and menus
+      // setup menubars and menus
       logger.info("setting up DT menubars and menus");
       jmbDTMenuBar = new JMenuBar();
       jfDT.setJMenuBar(jmbDTMenuBar);
@@ -499,7 +497,7 @@ public class EdgeConvertGUI {
    } // createDTScreen
 
    public void createDRScreen() {
-      //create Define Relations screen
+      // create Define Relations screen
       logger.info("creating Define Relations Screen");
       jfDR = new JFrame(DEFINE_RELATIONS);
       jfDR.setSize(HORIZ_SIZE, VERT_SIZE);
@@ -508,7 +506,7 @@ public class EdgeConvertGUI {
       jfDR.addWindowListener(edgeWindowListener);
       jfDR.getContentPane().setLayout(new BorderLayout());
 
-      //setup menubars and menus
+      // setup menubars and menus
       logger.info("setting up DR menubars and menus");
       jmbDRMenuBar = new JMenuBar();
       jfDR.setJMenuBar(jmbDRMenuBar);
@@ -823,7 +821,6 @@ public class EdgeConvertGUI {
             return;
          }
       }
-      
    }
 
    private void setCurrentDRField2(String selText) {
@@ -953,14 +950,14 @@ public class EdgeConvertGUI {
       returnVal = jfcEdge.showSaveDialog(null);
       if (returnVal == JFileChooser.APPROVE_OPTION) {
          saveFile = jfcEdge.getSelectedFile();
-         if (saveFile.exists ()) {
-             int response = JOptionPane.showConfirmDialog(null, "Overwrite existing file?", "Confirm Overwrite",
-                JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
-                logger.info("File Overwritten");
-             if (response == JOptionPane.CANCEL_OPTION) {
-                logger.info("File Canceled");
-                return;
-             }
+         if (saveFile.exists()) {
+            int response = JOptionPane.showConfirmDialog(null, "Overwrite existing file?", "Confirm Overwrite",
+                  JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+            logger.info("File Overwritten");
+            if (response == JOptionPane.CANCEL_OPTION) {
+               logger.info("File Canceled");
+               return;
+            }
          }
          if (!saveFile.getName().endsWith("sav")) {
             String temp = saveFile.getAbsolutePath() + ".sav";
@@ -974,7 +971,6 @@ public class EdgeConvertGUI {
          return;
       }
       writeSave();
-      
    }
 
    private void writeSave() {
@@ -997,7 +993,7 @@ public class EdgeConvertGUI {
             // close the file
             pw.close();
          } catch (IOException ioe) {
-            logger.error("IOException Found : " + ioe);
+            logger.warn("IO Exception" + ioe);
          }
          logger.info("Saving data");
          dataSaved = true;
@@ -1014,10 +1010,9 @@ public class EdgeConvertGUI {
 
       returnVal = jfcOutputDir.showOpenDialog(null);
 
-
       logger.debug("returnVal: " + returnVal);
       logger.debug("outputDirOld: " + outputDirOld);
-      
+
       if (returnVal == JFileChooser.CANCEL_OPTION) {
          return;
       }
@@ -1042,7 +1037,8 @@ public class EdgeConvertGUI {
 
       logger.debug("outputDir: " + outputDir);
 
-      JOptionPane.showMessageDialog(null, "The available products to create DDL statements are:\n" + displayProductNames());
+      JOptionPane.showMessageDialog(null,
+            "The available products to create DDL statements are:\n" + displayProductNames());
       jmiDTOptionsShowProducts.setEnabled(true);
       jmiDROptionsShowProducts.setEnabled(true);
    }
@@ -1070,21 +1066,20 @@ public class EdgeConvertGUI {
 
       String classLocation = EdgeConvertGUI.class.getResource("EdgeConvertGUI.class").toString();
       if (classLocation.startsWith("jar:")) {
-          String jarfilename = classLocation.replaceFirst("^.*:", "").replaceFirst("!.*$", "");
-          System.out.println("Jarfile: " + jarfilename);
-          logger.info("Jarfile: " + jarfilename);
-          try (JarFile jarfile = new JarFile(jarfilename)) {
-              ArrayList<File> filenames = new ArrayList<>();
-              for (JarEntry e : Collections.list(jarfile.entries())) {
-                  filenames.add(new File(e.getName()));
-              }
-              resultFiles = filenames.toArray(new File[0]);
-          } catch (IOException ioe) {
-              throw new RuntimeException(ioe);
-          }
-      } 
-      else {
-          resultFiles = outputDir.listFiles();
+         String jarfilename = classLocation.replaceFirst("^.*:", "").replaceFirst("!.*$", "");
+         System.out.println("Jarfile: " + jarfilename);
+         logger.info("Jarfile: " + jarfilename);
+         try (JarFile jarfile = new JarFile(jarfilename)) {
+            ArrayList<File> filenames = new ArrayList<>();
+            for (JarEntry e : Collections.list(jarfile.entries())) {
+               filenames.add(new File(e.getName()));
+            }
+            resultFiles = filenames.toArray(new File[0]);
+         } catch (IOException ioe) {
+            throw new RuntimeException(ioe);
+         }
+      } else {
+         resultFiles = outputDir.listFiles();
       }
       alProductNames.clear();
       alSubclasses.clear();
@@ -1205,7 +1200,7 @@ public class EdgeConvertGUI {
             // close the file
             pw.close();
          } catch (IOException ioe) {
-            logger.error("IO Exception Found : " + ioe);
+            logger.error("IOException Found : " + ioe);
          }
       }
    }
@@ -1233,23 +1228,33 @@ public class EdgeConvertGUI {
    }
 
    class EdgeWindowListener implements WindowListener {
-      
-      public void windowActivated(WindowEvent we) {}
-      public void windowClosed(WindowEvent we) {}
-      public void windowDeactivated(WindowEvent we) {}
-      public void windowDeiconified(WindowEvent we) {}
-      public void windowIconified(WindowEvent we) {}
-      public void windowOpened(WindowEvent we) {}
-      
+      public void windowActivated(WindowEvent we) {
+      }
+
+      public void windowClosed(WindowEvent we) {
+      }
+
+      public void windowDeactivated(WindowEvent we) {
+      }
+
+      public void windowDeiconified(WindowEvent we) {
+      }
+
+      public void windowIconified(WindowEvent we) {
+      }
+
+      public void windowOpened(WindowEvent we) {
+      }
+
       public void windowClosing(WindowEvent we) {
          logger.info("Window Listening");
          if (!dataSaved) {
             int answer = JOptionPane.showOptionDialog(null,
-                "You currently have unsaved data. Would you like to save?",
-                "Are you sure?",
-                JOptionPane.YES_NO_CANCEL_OPTION,
-                JOptionPane.QUESTION_MESSAGE,
-                null, null, null);
+                  "You currently have unsaved data. Would you like to save?",
+                  "Are you sure?",
+                  JOptionPane.YES_NO_CANCEL_OPTION,
+                  JOptionPane.QUESTION_MESSAGE,
+                  null, null, null);
             logger.debug("Window Answer:" + answer);
             if (answer == JOptionPane.YES_OPTION) {
                if (saveFile == null) {
@@ -1268,7 +1273,7 @@ public class EdgeConvertGUI {
                return;
             }
          }
-         System.exit(0); //No was selected
+         System.exit(0); // No was selected
          logger.info("Data not saved");
       }
    }
@@ -1281,7 +1286,8 @@ public class EdgeConvertGUI {
                   "You have not selected a path that contains valid output definition files yet.\nPlease select a path now.");
             setOutputDir();
          }
-         getOutputClasses(); //in case outputDir was set before a file was loaded and EdgeTable/EdgeField objects created
+         getOutputClasses(); // in case outputDir was set before a file was loaded and EdgeTable/EdgeField
+                             // objects created
          logger.debug("Output Dir: " + outputDir);
          sqlString = getSQLStatements();
          logger.info("sqlString: " + sqlString);
@@ -1379,6 +1385,7 @@ public class EdgeConvertGUI {
                saveAs();
             } else {
                writeSave();
+               logger.info("Data has been saved.");
             }
          }
 
