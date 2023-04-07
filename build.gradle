@@ -15,6 +15,9 @@ ext {
 
 test {
     testLogging.showStandardStreams = true
+	testLogging {
+		events "PASSED", "SKIPPED", "FAILED"
+	}
 }
 
 application {
