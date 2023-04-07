@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="EdgeTableTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2023-04-07T05:33:30" hostname="Catherines-MacBook-Pro-3.local" time="0.019">
+  <properties/>
+  <testcase name="testMoveFieldDownNativeField" classname="EdgeTableTest" time="0.003"/>
+  <testcase name="testSetRelatedField" classname="EdgeTableTest" time="0.001"/>
+  <testcase name="testtoString" classname="EdgeTableTest" time="0.003"/>
+  <testcase name="testMakeArrays_RelatedTable" classname="EdgeTableTest" time="0.001"/>
+  <testcase name="testMakeArrays_NativeField" classname="EdgeTableTest" time="0.001"/>
+  <testcase name="testGetName" classname="EdgeTableTest" time="0.0"/>
+  <testcase name="testMoveFieldUpNativeField" classname="EdgeTableTest" time="0.002"/>
+  <testcase name="testGetAlRelatedTables" classname="EdgeTableTest" time="0.001"/>
+  <testcase name="testGetAlNativeFields" classname="EdgeTableTest" time="0.0"/>
+  <testcase name="testAddNativeField" classname="EdgeTableTest" time="0.001"/>
+  <testcase name="testGetNumFigure" classname="EdgeTableTest" time="0.001"/>
+  <testcase name="testMoveFirstFieldUpNativeField" classname="EdgeTableTest" time="0.001"/>
+  <testcase name="testAddRelatedTable" classname="EdgeTableTest" time="0.0"/>
+  <testcase name="testMoveLastFieldDownNativeField" classname="EdgeTableTest" time="0.002"/>
+  <system-out><![CDATA[01:33:30.862 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+01:33:30.862 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.863 [Test worker] INFO  EdgeTable - Adding native field 4
+01:33:30.863 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.863 [Test worker] INFO  EdgeTable - Adding native field 5
+01:33:30.863 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.863 [Test worker] INFO  EdgeTable - Adding native field 6
+01:33:30.863 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.863 [Test worker] INFO  EdgeTable - Adding native field 7
+01:33:30.864 [Test worker] DEBUG EdgeTable - Moving down to index 2
+01:33:30.864 [Test worker] INFO  EdgeTable - Retrieving native fields [4, 5, 7, 6]
+01:33:30.865 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+01:33:30.865 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.865 [Test worker] INFO  EdgeTable - Adding native field 1
+01:33:30.865 [Test worker] INFO  EdgeTable - Related fields being set.
+01:33:30.866 [Test worker] DEBUG EdgeTable - Setting related field 0 with value 3
+01:33:30.866 [Test worker] INFO  EdgeTable - Retrieving related fields [3]
+01:33:30.866 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+01:33:30.866 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.867 [Test worker] INFO  EdgeTable - Adding native field 1
+01:33:30.867 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.867 [Test worker] INFO  EdgeTable - Adding native field 2
+01:33:30.867 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.867 [Test worker] INFO  EdgeTable - Adding native field 3
+01:33:30.867 [Test worker] INFO  EdgeTable - Related table being added.
+01:33:30.867 [Test worker] INFO  EdgeTable - Adding related table 8
+01:33:30.868 [Test worker] INFO  EdgeTable - Related table being added.
+01:33:30.868 [Test worker] INFO  EdgeTable - Adding related table 9
+01:33:30.868 [Test worker] INFO  EdgeTable - Related table being added.
+01:33:30.868 [Test worker] INFO  EdgeTable - Adding related table 10
+01:33:30.868 [Test worker] INFO  EdgeTable - Related fields being set.
+01:33:30.868 [Test worker] DEBUG EdgeTable - Setting related field 0 with value 4
+01:33:30.868 [Test worker] INFO  EdgeTable - Related fields being set.
+01:33:30.869 [Test worker] DEBUG EdgeTable - Setting related field 1 with value 5
+01:33:30.869 [Test worker] INFO  EdgeTable - Related fields being set.
+01:33:30.869 [Test worker] DEBUG EdgeTable - Setting related field 2 with value 6
+01:33:30.869 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+01:33:30.870 [Test worker] INFO  EdgeTable - Related table being added.
+01:33:30.870 [Test worker] INFO  EdgeTable - Adding related table 8
+01:33:30.870 [Test worker] INFO  EdgeTable - Related table being added.
+01:33:30.870 [Test worker] INFO  EdgeTable - Adding related table 9
+01:33:30.870 [Test worker] INFO  EdgeTable - Related table being added.
+01:33:30.870 [Test worker] INFO  EdgeTable - Adding related table 10
+01:33:30.870 [Test worker] INFO  EdgeTable - Retrieving related tables [8, 9, 10]
+01:33:30.871 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+01:33:30.871 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.871 [Test worker] INFO  EdgeTable - Adding native field 1
+01:33:30.871 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.871 [Test worker] INFO  EdgeTable - Adding native field 2
+01:33:30.871 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.872 [Test worker] INFO  EdgeTable - Adding native field 3
+01:33:30.872 [Test worker] INFO  EdgeTable - Retrieving native fields [1, 2, 3]
+01:33:30.872 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+01:33:30.872 [Test worker] INFO  EdgeTable - Retrieving name testEdgeTable
+01:33:30.872 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+01:33:30.873 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.873 [Test worker] INFO  EdgeTable - Adding native field 4
+01:33:30.873 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.873 [Test worker] INFO  EdgeTable - Adding native field 5
+01:33:30.873 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.873 [Test worker] INFO  EdgeTable - Adding native field 6
+01:33:30.873 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.874 [Test worker] INFO  EdgeTable - Adding native field 7
+01:33:30.874 [Test worker] DEBUG EdgeTable - Moving field up at index 3
+01:33:30.874 [Test worker] INFO  EdgeTable - Retrieving native fields [4, 5, 7, 6]
+01:33:30.874 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+01:33:30.874 [Test worker] INFO  EdgeTable - Retrieving related tables []
+01:33:30.875 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+01:33:30.875 [Test worker] INFO  EdgeTable - Retrieving native fields []
+01:33:30.875 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+01:33:30.875 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.875 [Test worker] INFO  EdgeTable - Adding native field 1
+01:33:30.876 [Test worker] INFO  EdgeTable - Retrieving native fields [1]
+01:33:30.876 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+01:33:30.876 [Test worker] INFO  EdgeTable - Retrieving numFigure 1
+01:33:30.877 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+01:33:30.877 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.877 [Test worker] INFO  EdgeTable - Adding native field 4
+01:33:30.877 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.877 [Test worker] INFO  EdgeTable - Adding native field 5
+01:33:30.877 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.878 [Test worker] INFO  EdgeTable - Adding native field 6
+01:33:30.878 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.878 [Test worker] INFO  EdgeTable - Adding native field 7
+01:33:30.878 [Test worker] DEBUG EdgeTable - Moving field up at index 0
+01:33:30.878 [Test worker] DEBUG EdgeTable - Field has been moved.
+01:33:30.878 [Test worker] INFO  EdgeTable - Retrieving native fields [4, 5, 6, 7]
+01:33:30.878 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+01:33:30.879 [Test worker] INFO  EdgeTable - Related table being added.
+01:33:30.879 [Test worker] INFO  EdgeTable - Adding related table 2
+01:33:30.879 [Test worker] INFO  EdgeTable - Retrieving related tables [2]
+01:33:30.879 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+01:33:30.879 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.879 [Test worker] INFO  EdgeTable - Adding native field 4
+01:33:30.880 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.880 [Test worker] INFO  EdgeTable - Adding native field 5
+01:33:30.880 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.880 [Test worker] INFO  EdgeTable - Adding native field 6
+01:33:30.880 [Test worker] INFO  EdgeTable - Native field being added.
+01:33:30.880 [Test worker] INFO  EdgeTable - Adding native field 7
+01:33:30.880 [Test worker] DEBUG EdgeTable - Moving down to index 3
+01:33:30.880 [Test worker] DEBUG EdgeTable - Field has been moved.
+01:33:30.880 [Test worker] INFO  EdgeTable - Retrieving native fields [4, 5, 6, 7]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

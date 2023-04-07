@@ -6,6 +6,7 @@
         </Console>
         <File name="MyFile" fileName="runner.log" immediateFlush="true" append="false">
             <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <ThresholdFilter level="INFO" onMatch="DENY" onMismatch="NEUTRAL"/>
         </File>        
         <File name="Timer" fileName="timer.log" immediateFlush="true" append="true">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %logger{36} - %msg%n"/>
@@ -17,8 +18,5 @@
             <AppenderRef ref="MyFile" level="debug"/>
             <AppenderRef ref="Timer" level="off"/>
         </Root>
-        <Logger name="timer" level="info" additivity="false">
-            <AppenderRef ref="Timer"/>
-        </Logger>
     </Loggers>
 </Configuration>

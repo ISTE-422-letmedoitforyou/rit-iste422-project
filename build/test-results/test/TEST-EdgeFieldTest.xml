@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="EdgeFieldTest" tests="22" skipped="0" failures="0" errors="0" timestamp="2023-04-07T05:33:30" hostname="Catherines-MacBook-Pro-3.local" time="0.031">
+  <properties/>
+  <testcase name="testGetFieldBound" classname="EdgeFieldTest" time="0.001"/>
+  <testcase name="testGetIsPrimaryKey" classname="EdgeFieldTest" time="0.001"/>
+  <testcase name="testGetStrDataType" classname="EdgeFieldTest" time="0.0"/>
+  <testcase name="testSetVarcharValue" classname="EdgeFieldTest" time="0.001"/>
+  <testcase name="testSetFieldBound" classname="EdgeFieldTest" time="0.002"/>
+  <testcase name="testGetTableID" classname="EdgeFieldTest" time="0.0"/>
+  <testcase name="testSetDataType" classname="EdgeFieldTest" time="0.001"/>
+  <testcase name="testGetDataType" classname="EdgeFieldTest" time="0.0"/>
+  <testcase name="testToString" classname="EdgeFieldTest" time="0.006"/>
+  <testcase name="testSetIsPrimaryKey" classname="EdgeFieldTest" time="0.002"/>
+  <testcase name="testGetName" classname="EdgeFieldTest" time="0.0"/>
+  <testcase name="testGetTableBound" classname="EdgeFieldTest" time="0.001"/>
+  <testcase name="testSetTableID" classname="EdgeFieldTest" time="0.002"/>
+  <testcase name="testGetDefaultValue" classname="EdgeFieldTest" time="0.0"/>
+  <testcase name="testSetTableBound" classname="EdgeFieldTest" time="0.001"/>
+  <testcase name="testGetDisallowNull" classname="EdgeFieldTest" time="0.0"/>
+  <testcase name="testSetVarcharValueOutOfBounds" classname="EdgeFieldTest" time="0.001"/>
+  <testcase name="testSetDefaultValue" classname="EdgeFieldTest" time="0.001"/>
+  <testcase name="testGetNumFigure" classname="EdgeFieldTest" time="0.001"/>
+  <testcase name="testGetVarcharValue" classname="EdgeFieldTest" time="0.0"/>
+  <testcase name="testSetDisallowNull" classname="EdgeFieldTest" time="0.004"/>
+  <testcase name="testSetDataTypeOutOfBounds" classname="EdgeFieldTest" time="0.003"/>
+  <system-out><![CDATA[01:33:30.829 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.830 [Test worker] INFO  EdgeField - Retrieving Field Bound : 0
+01:33:30.830 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.830 [Test worker] INFO  EdgeField - Primary key : false
+01:33:30.831 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.831 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.831 [Test worker] DEBUG EdgeField - setting varcharValue to 1
+01:33:30.831 [Test worker] INFO  EdgeField - varcharValue is 1
+01:33:30.832 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.832 [Test worker] INFO  EdgeField - Setting Field Bound
+01:33:30.834 [Test worker] DEBUG EdgeField - Field Grade is now bound to 1
+01:33:30.834 [Test worker] INFO  EdgeField - Retrieving Field Bound : 1
+01:33:30.834 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.835 [Test worker] INFO  EdgeField - Retrieving tableID 0
+01:33:30.835 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.835 [Test worker] INFO  EdgeField - setting dataType to 2
+01:33:30.836 [Test worker] INFO  EdgeField - Field data type : 2
+01:33:30.836 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.836 [Test worker] INFO  EdgeField - Field data type : 0
+01:33:30.836 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.843 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.844 [Test worker] INFO  EdgeField - Setting primary key to true
+01:33:30.844 [Test worker] DEBUG EdgeField - Primary key now set to true
+01:33:30.844 [Test worker] INFO  EdgeField - Primary key : true
+01:33:30.845 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.845 [Test worker] INFO  EdgeField - Retrieving name Grade
+01:33:30.845 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.846 [Test worker] INFO  EdgeField - Table Bound : 0
+01:33:30.846 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.846 [Test worker] INFO  EdgeField - Setting table id
+01:33:30.847 [Test worker] DEBUG EdgeField - Table id for field is now Grade: 12
+01:33:30.847 [Test worker] INFO  EdgeField - Retrieving tableID 12
+01:33:30.848 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.848 [Test worker] INFO  EdgeField - Default value is set 
+01:33:30.848 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.849 [Test worker] INFO  EdgeField - Setting Table Bound
+01:33:30.849 [Test worker] DEBUG EdgeField - Field Grade is now bound to table 1
+01:33:30.849 [Test worker] INFO  EdgeField - Table Bound : 1
+01:33:30.850 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.850 [Test worker] INFO  EdgeField - Current disallow null value : false
+01:33:30.850 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.851 [Test worker] WARN  EdgeField - Varchar value -1 not above 0.
+01:33:30.851 [Test worker] INFO  EdgeField - varcharValue is 1
+01:33:30.851 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.851 [Test worker] INFO  EdgeField - Setting default value
+01:33:30.852 [Test worker] DEBUG EdgeField - Default value is now empty
+01:33:30.852 [Test worker] INFO  EdgeField - Default value is set none
+01:33:30.852 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.853 [Test worker] INFO  EdgeField - Retrieving numFigure 3
+01:33:30.853 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.853 [Test worker] INFO  EdgeField - varcharValue is 1
+01:33:30.853 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.854 [Test worker] INFO  EdgeField - Setting disallow null : true
+01:33:30.854 [Test worker] DEBUG EdgeField - Disallow null is now set to true
+01:33:30.856 [Test worker] INFO  EdgeField - Current disallow null value : true
+01:33:30.857 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+01:33:30.860 [Test worker] WARN  EdgeField - Data type 600 not between 0 and data type length 600
+01:33:30.860 [Test worker] INFO  EdgeField - Field data type : 0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
