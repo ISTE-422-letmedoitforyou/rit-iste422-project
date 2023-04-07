@@ -101,7 +101,7 @@ public class EdgeTableTest {
         testEdgeTable.makeArrays();
         //[4,5,7,6]
         testEdgeTable.moveFieldDown(2);
-		assertArrayEquals("Field at index 3 is moved up, [4,5,7,6] should be the new arraylist",new int[]{4,5,7,6},testEdgeTable.getNativeFieldsArray());
+		assertArrayEquals("Field at index 3 is moved down, [4,5,7,6] should be the new arraylist",new int[]{4,5,7,6},testEdgeTable.getNativeFieldsArray());
 	}
 
 //testing move field down when index input is the last one
@@ -114,7 +114,7 @@ public class EdgeTableTest {
         testEdgeTable.addNativeField(7);
         testEdgeTable.makeArrays();
         testEdgeTable.moveFieldDown(3);
-		assertArrayEquals("Field at index 0 is moved up, nothing should change",new int[]{4,5,6,7},testEdgeTable.getNativeFieldsArray());
+		assertArrayEquals("Field at index 0 is moved down, nothing should change",new int[]{4,5,6,7},testEdgeTable.getNativeFieldsArray());
 	}
 
 //testing make array
