@@ -30,13 +30,13 @@ public class EdgeTableTest {
     @Test
 	public void testGetAlRelatedTables() {
         testEdgeTable.makeArrays();
-		assertEquals("AlRelatedTables was inistialized and empty",0,testEdgeTable.getRelatedTablesArray().length);
+		assertEquals("AlRelatedTables was initialized and empty",0,testEdgeTable.getRelatedTablesArray().length);
 	}
 
     @Test
 	public void testGetAlNativeFields() {
 		testEdgeTable.makeArrays();
-		assertEquals("AlNavtiveFields was inistialized and empty",0,testEdgeTable.getNativeFieldsArray().length);
+		assertEquals("AlNavtiveFields was initialized and empty",0,testEdgeTable.getNativeFieldsArray().length);
 	}
 
 //testing add related table
@@ -145,22 +145,22 @@ public class EdgeTableTest {
 // RelatedTables: 8|9|10
 // RelatedFields: 4|5|6
 
-//test failing
-    // @Test
-    // public void testToString(){
-    //     testEdgeTable.addNativeField(1);
-    //     testEdgeTable.addNativeField(2);
-    //     testEdgeTable.addNativeField(3);
-    //     testEdgeTable.addRelatedTable(8);
-    //     testEdgeTable.addRelatedTable(9);
-    //     testEdgeTable.addRelatedTable(10);
-    //     testEdgeTable.makeArrays();
-    //     testEdgeTable.setRelatedField(0,4);
-    //     testEdgeTable.setRelatedField(1,5);
-    //     testEdgeTable.setRelatedField(2,6);
-    //     assertEquals("String should look like Table: 1\r\n\r\n TableName: testEdgeTable\r\nNativeFields: 1|2|3\r\nRelatedTables: 8|9|10\r\nRelatedFields: 4|5|6",new String("Table: 1 \r\n{\r\nTableName: testEdgeTable\r\nNativeFields: 1|2|3\r\nRelatedTables: 8|9|10\r\nRelatedFields: 4|5|6\r\n}\r\n"),testEdgeTable.toString());
+
+    @Test
+    public void testToString(){
+        testEdgeTable.addNativeField(1);
+        testEdgeTable.addNativeField(2);
+        testEdgeTable.addNativeField(3);
+        testEdgeTable.addRelatedTable(8);
+        testEdgeTable.addRelatedTable(9);
+        testEdgeTable.addRelatedTable(10);
+        testEdgeTable.makeArrays();
+        testEdgeTable.setRelatedField(0,4);
+        testEdgeTable.setRelatedField(1,5);
+        testEdgeTable.setRelatedField(2,6);
+        assertEquals("String should look like Table: 1\r\n\r\n TableName: testEdgeTable\r\nNativeFields: 1|2|3\r\nRelatedTables: 8|9|10\r\nRelatedFields: 4|5|6",new String("Table: 1 \r\n{\r\nTableName: testEdgeTable\r\nNativeFields: 1|2|3\r\nRelatedTables: 8|9|10\r\nRelatedFields: 4|5|6\r\n}\r\n"),testEdgeTable.toString());
         
-    // }
+    }
    
 
 
