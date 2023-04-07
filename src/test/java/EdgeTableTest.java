@@ -145,23 +145,20 @@ public class EdgeTableTest {
 // RelatedTables: 8|9|10
 // RelatedFields: 4|5|6
 
-//test failed
-    // @Test
-    // public void testToString(){
-    //     testEdgeTable.addNativeField(1);
-    //     testEdgeTable.addNativeField(2);
-    //     testEdgeTable.addNativeField(3);
-    //     testEdgeTable.addRelatedTable(8);
-    //     testEdgeTable.addRelatedTable(9);
-    //     testEdgeTable.addRelatedTable(10);
-    //     testEdgeTable.makeArrays();
-    //     testEdgeTable.setRelatedField(0,4);
-    //     testEdgeTable.setRelatedField(1,5);
-    //     testEdgeTable.setRelatedField(2,6);
-    //     assertEquals("String should look like Table: 1\r\n\r\n TableName: testEdgeTable\r\nNativeFields: 1|2|3\r\nRelatedTables: 8|9|10\r\nRelatedFields: 4|5|6",new String("Table: 1 \r\n{\r\nTableName: testEdgeTable\r\nNativeFields: 1|2|3\r\nRelatedTables: 8|9|10\r\nRelatedFields: 4|5|6\r\n}\r\n"),testEdgeTable.toString());
-        
-    // }
-   
+    @Test
+    public void testtoString() {
+        testEdgeTable.addNativeField(1);
+        testEdgeTable.addNativeField(2);
+        testEdgeTable.addNativeField(3);
+        testEdgeTable.addRelatedTable(8);
+        testEdgeTable.addRelatedTable(9);
+        testEdgeTable.addRelatedTable(10);
+        testEdgeTable.makeArrays();
+        testEdgeTable.setRelatedField(0, 4);
+        testEdgeTable.setRelatedField(1, 5);
+        testEdgeTable.setRelatedField(2, 6);
+    assertEquals("String should look like", new String("Table: 1\r\n{\r\nTableName: testEdgeTable\r\nNativeFields: 1|2|3\r\nRelatedTables: 8|9|10\r\nRelatedFields: 4|5|6\r\n}\r\n"), testEdgeTable.toString());
+  }
 
 
 
