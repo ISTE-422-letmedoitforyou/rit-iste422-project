@@ -1314,7 +1314,7 @@ public class EdgeConvertGUI {
             returnVal = jfcEdge.showOpenDialog(null);
             if (returnVal == JFileChooser.APPROVE_OPTION) {
                parseFile = jfcEdge.getSelectedFile();
-               ecfp = new EdgeConvertFileParser(parseFile);
+               ecfp = new EdgeParse(parseFile);
                tables = ecfp.getEdgeTables();
                for (int i = 0; i < tables.length; i++) {
                   tables[i].makeArrays();
@@ -1354,7 +1354,7 @@ public class EdgeConvertGUI {
             returnVal = jfcEdge.showOpenDialog(null);
             if (returnVal == JFileChooser.APPROVE_OPTION) {
                saveFile = jfcEdge.getSelectedFile();
-               ecfp = new EdgeConvertFileParser(saveFile);
+               ecfp = new EdgeSavParse(saveFile);
                tables = ecfp.getEdgeTables();
                fields = ecfp.getEdgeFields();
                ecfp = null;
