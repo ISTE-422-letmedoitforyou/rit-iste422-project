@@ -5,9 +5,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class parseSaveFile() extends EdgeConvertFilePartser throws IOException { // this method is unclear and confusing in places
-      StringTokenizer stTables, stNatFields, stRelFields, stNatRelFields, stField;
-      EdgeTable tempTable;
-      EdgeField tempField;
+      private StringTokenizer stTables, stNatFields, stRelFields, stNatRelFields, stField;
+      private EdgeTable tempTable;
+      private EdgeField tempField;
       currentLine = br.readLine();
       currentLine = br.readLine(); // this should be "Table: "
       while (currentLine.startsWith("Table: ")) {

@@ -5,6 +5,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class parseEdgeFile() extends EdgeConvertFilePartser throws IOException {
+    private EdgeField tempField;
+    private String style;
+    private String text;
+    private String tableName;
+    private String fieldName;
+    private boolean isEntity, isAttribute, isUnderlined = false;
       logger.info("Parsing an Edge File");
       while ((currentLine = br.readLine()) != null) {
          currentLine = currentLine.trim();

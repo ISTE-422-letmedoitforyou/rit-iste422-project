@@ -8,18 +8,10 @@ public abstract class EdgeConvertFileParser {
    public static Logger logger = LogManager.getLogger(EdgeConvertFileParser.class);
 
    private File parseFile;
-   private FileReader fr;
-   private BufferedReader br;
-   private String currentLine;
    private ArrayList alTables, alFields, alConnectors;
    private EdgeTable[] tables;
    private EdgeField[] fields;
-   private EdgeField tempField;
    private EdgeConnector[] connectors;
-   private String style;
-   private String text;
-   private String tableName;
-   private String fieldName;
    private boolean isEntity, isAttribute, isUnderlined = false;
    private int numFigure, numConnector, numFields, numTables, numNativeRelatedFields;
    private int endPoint1, endPoint2;
@@ -178,6 +170,9 @@ public abstract class EdgeConvertFileParser {
    }
 
    public void openFile(File inputFile) {
+      private FileReader fr;
+      private BufferedReader br;
+      private String currentLine;
       try {
          logger.info("Opening file : " + inputFile);
          fr = new FileReader(inputFile);
