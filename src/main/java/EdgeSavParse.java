@@ -36,10 +36,12 @@ public class EdgeSavParse extends EdgeConvertFileParser {
         } // try
         catch (FileNotFoundException fnfe) {
             logger.error("File Not Found Exception. Cannot find \"" + inputFile.getName() + "\".");
+            JOptionPane.showMessageDialog(null, "File Not Found");
             System.exit(0);
         } // catch FileNotFoundException
         catch (IOException ioe) {
             logger.error("IOException " + ioe);
+            JOptionPane.showMessageDialog(null, "File Does Not Exist at Specified Location");
             System.exit(0);
         } // catch IOException
     } // openFile()

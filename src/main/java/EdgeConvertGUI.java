@@ -1023,6 +1023,8 @@ public class EdgeConvertGUI {
 
       getOutputClasses();
 
+      logger.info("Product Names" + alProductNames);
+
       if (alProductNames.size() == 0) {
          JOptionPane.showMessageDialog(null,
                "The path:\n" + outputDir + "\ncontains no valid output definition files.");
