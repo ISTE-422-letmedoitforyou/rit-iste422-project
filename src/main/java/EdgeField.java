@@ -135,7 +135,8 @@ public class EdgeField {
    }
 
    public static String[] getStrDataType() {
-      logger.debug("String data type : " + Arrays.toString(strDataType));
+      logger.debug("String data types : " + strDataType[0] + " " + strDataType[1] + " " + strDataType[2] + " "
+            + strDataType[3]);
       return strDataType;
    }
 

@@ -7,16 +7,44 @@ import org.apache.logging.log4j.Logger;
 public abstract class EdgeConvertFileParser {
    public static Logger logger = LogManager.getLogger(EdgeConvertFileParser.class);
 
-   private File parseFile;
-   private ArrayList alTables, alFields, alConnectors;
-   private EdgeTable[] tables;
-   private EdgeField[] fields;
-   private EdgeConnector[] connectors;
-   private boolean isEntity, isAttribute, isUnderlined = false;
-   private int numFigure, numConnector, numFields, numTables, numNativeRelatedFields;
-   private int endPoint1, endPoint2;
-   private int numLine;
-   private String endStyle1, endStyle2;
+   protected File parseFile;
+   protected FileReader fr;
+   protected BufferedReader br;
+   protected String currentLine;
+   protected ArrayList alTables;
+
+   protected ArrayList alFields;
+
+   protected ArrayList alConnectors;
+   protected EdgeTable[] tables;
+   protected EdgeField[] fields;
+   protected EdgeField tempField;
+   protected EdgeConnector[] connectors;
+   protected String style;
+   protected String text;
+   protected String tableName;
+   protected String fieldName;
+   protected boolean isEntity;
+
+   protected boolean isAttribute;
+
+   protected boolean isUnderlined = false;
+   protected int numFigure;
+
+   protected int numConnector;
+
+   protected int numFields;
+
+   protected int numTables;
+
+   protected int numNativeRelatedFields;
+   protected int endPoint1;
+
+   protected int endPoint2;
+   protected int numLine;
+   protected String endStyle1;
+
+   protected String endStyle2;
    public static final String EDGE_ID = "EDGE Diagram File"; // first line of .edg files should be this
    public static final String SAVE_ID = "EdgeConvert Save File"; // first line of save files should be this
    public static final String DELIM = "|";
@@ -32,10 +60,9 @@ public abstract class EdgeConvertFileParser {
       isAttribute = false;
       parseFile = constructorFile;
       numLine = 0;
-      this.openFile(parseFile);
    }
 
-   private void resolveConnectors() { // Identify nature of Connector endpoints
+   protected void resolveConnectors() { // Identify nature of Connector endpoints
       logger.debug("Connector endpoints being resolved.");
       int endPoint1, endPoint2;
       int fieldIndex = 0, table1Index = 0, table2Index = 0;
@@ -118,7 +145,7 @@ public abstract class EdgeConvertFileParser {
       } // connectors for() loop
    } // resolveConnectors()
 
-   private void makeArrays() { // convert ArrayList objects into arrays of the appropriate Class type
+   protected void makeArrays() { // convert ArrayList objects into arrays of the appropriate Class type
       if (alTables != null) {
          tables = (EdgeTable[]) alTables.toArray(new EdgeTable[alTables.size()]);
          logger.debug("Array of tables made: " + Arrays.toString(tables));
@@ -139,7 +166,7 @@ public abstract class EdgeConvertFileParser {
       }
    }
 
-   private boolean isTableDup(String testTableName) {
+   protected boolean isTableDup(String testTableName) {
       for (int i = 0; i < alTables.size(); i++) {
          EdgeTable tempTable = (EdgeTable) alTables.get(i);
          if (tempTable.getName().equals(testTableName)) {
