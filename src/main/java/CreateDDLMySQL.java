@@ -74,10 +74,10 @@ public class CreateDDLMySQL extends EdgeConvertCreateDDL {
                      numForeignKey++;
                      logger.info("current field is a foreign key");
                   }
-                  if (currentField.hasNext()){
+                  if(!(nativeFieldCount + 1 < nativeFieldCount)) {
                      sb.append(",\r\n");
                      logger.info("Last Field");
-                  } // end of field
+                     } // end of field
                }
                if (numPrimaryKey > 0) { // table has primary key(s)
                   logger.debug("Adding " + numPrimaryKey + " primary keys ");
@@ -107,10 +107,7 @@ public class CreateDDLMySQL extends EdgeConvertCreateDDL {
                               getTable(getField(nativeFields[i]).getTableBound()).getName() + "("
                               + getField(relatedFields[i]).getName() + ")");
                         if (currentFK < numForeignKey) {
-                                 if (currentField.hasNext()){
-                                    sb.append(",\r\n");
-                                    logger.info("Last Field");
-                  } // end of field
+                           sb.append(",\r\n");
                         }
                         currentFK++;
                      }
