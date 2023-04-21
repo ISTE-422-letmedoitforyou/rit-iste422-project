@@ -1,64 +1,225 @@
-C17:42:22.419 [Test worker] INFO  timer.EdgeConnector - start _init
-Z17:42:22.421 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-A17:42:22.421 [Test worker] INFO  timer.EdgeConnector - end _init
-F17:42:22.422 [Test worker] INFO  EdgeConnector - Getting EndPoint1: 2
-C17:42:22.422 [Test worker] INFO  timer.EdgeConnector - start _init
-Z17:42:22.422 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-A17:42:22.422 [Test worker] INFO  timer.EdgeConnector - end _init
-F17:42:22.423 [Test worker] INFO  EdgeConnector - Getting EndPoint2: 3
-C17:42:22.423 [Test worker] INFO  timer.EdgeConnector - start _init
-Z17:42:22.423 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-A17:42:22.423 [Test worker] INFO  timer.EdgeConnector - end _init
-O17:42:22.423 [Test worker] INFO  EdgeConnector - Getting EndStyle1: testStyle1
-C17:42:22.423 [Test worker] INFO  timer.EdgeConnector - start _init
-Z17:42:22.424 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-A17:42:22.424 [Test worker] INFO  timer.EdgeConnector - end _init
-O17:42:22.424 [Test worker] INFO  EdgeConnector - Getting EndStyle2: testStyle2
-C17:42:22.424 [Test worker] INFO  timer.EdgeConnector - start _init
-Z17:42:22.424 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-A17:42:22.424 [Test worker] INFO  timer.EdgeConnector - end _init
-H17:42:22.424 [Test worker] INFO  EdgeConnector - Getting Num Connector1
-C17:42:22.424 [Test worker] INFO  timer.EdgeConnector - start _init
-Z17:42:22.424 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-A17:42:22.424 [Test worker] INFO  timer.EdgeConnector - end _init
-K17:42:22.425 [Test worker] INFO  EdgeConnector - Getting IsEP1Field: false
-C17:42:22.425 [Test worker] INFO  timer.EdgeConnector - start _init
-Z17:42:22.425 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-A17:42:22.425 [Test worker] INFO  timer.EdgeConnector - end _init
-K17:42:22.425 [Test worker] INFO  EdgeConnector - Getting IsEP1Table: false
-	C17:42:22.426 [Test worker] INFO  timer.EdgeConnector - start _init
-	Z17:42:22.426 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-	A17:42:22.426 [Test worker] INFO  timer.EdgeConnector - end _init
-	K17:42:22.426 [Test worker] INFO  EdgeConnector - Getting IsEP2Field: false
+C01:33:30.810 [Test worker] INFO  timer.EdgeConnector - start _init
+Z01:33:30.813 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+A01:33:30.813 [Test worker] INFO  timer.EdgeConnector - end _init
+F01:33:30.813 [Test worker] INFO  EdgeConnector - Getting EndPoint1: 2
+C01:33:30.814 [Test worker] INFO  timer.EdgeConnector - start _init
+Z01:33:30.815 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+A01:33:30.815 [Test worker] INFO  timer.EdgeConnector - end _init
+F01:33:30.816 [Test worker] INFO  EdgeConnector - Getting EndPoint2: 3
+C01:33:30.816 [Test worker] INFO  timer.EdgeConnector - start _init
+Z01:33:30.816 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+A01:33:30.816 [Test worker] INFO  timer.EdgeConnector - end _init
+O01:33:30.817 [Test worker] INFO  EdgeConnector - Getting EndStyle1: testStyle1
+C01:33:30.817 [Test worker] INFO  timer.EdgeConnector - start _init
+Z01:33:30.817 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+A01:33:30.817 [Test worker] INFO  timer.EdgeConnector - end _init
+O01:33:30.818 [Test worker] INFO  EdgeConnector - Getting EndStyle2: testStyle2
+C01:33:30.818 [Test worker] INFO  timer.EdgeConnector - start _init
+Z01:33:30.818 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+A01:33:30.818 [Test worker] INFO  timer.EdgeConnector - end _init
+H01:33:30.818 [Test worker] INFO  EdgeConnector - Getting Num Connector1
+C01:33:30.819 [Test worker] INFO  timer.EdgeConnector - start _init
+Z01:33:30.819 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+A01:33:30.819 [Test worker] INFO  timer.EdgeConnector - end _init
+K01:33:30.819 [Test worker] INFO  EdgeConnector - Getting IsEP1Field: false
+C01:33:30.819 [Test worker] INFO  timer.EdgeConnector - start _init
+Z01:33:30.820 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+A01:33:30.820 [Test worker] INFO  timer.EdgeConnector - end _init
+K01:33:30.820 [Test worker] INFO  EdgeConnector - Getting IsEP1Table: false
+	C01:33:30.820 [Test worker] INFO  timer.EdgeConnector - start _init
+	Z01:33:30.821 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+	A01:33:30.821 [Test worker] INFO  timer.EdgeConnector - end _init
+	K01:33:30.821 [Test worker] INFO  EdgeConnector - Getting IsEP2Field: false
 
-C17:42:22.426 [Test worker] INFO  timer.EdgeConnector - start _init
+C01:33:30.821 [Test worker] INFO  timer.EdgeConnector - start _init
 
-Z17:42:22.426 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+Z01:33:30.821 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
 
-A17:42:22.426 [Test worker] INFO  timer.EdgeConnector - end _init
+A01:33:30.821 [Test worker] INFO  timer.EdgeConnector - end _init
 
-K17:42:22.426 [Test worker] INFO  EdgeConnector - Getting IsEP2Table: false
-C17:42:22.427 [Test worker] INFO  timer.EdgeConnector - start _init
-Z17:42:22.427 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-A17:42:22.427 [Test worker] INFO  timer.EdgeConnector - end _init
-E17:42:22.427 [Test worker] INFO  EdgeConnector - Setting IsEP1Field 
-F17:42:22.427 [Test worker] DEBUG EdgeConnector - Setting to ... false
-K17:42:22.427 [Test worker] INFO  EdgeConnector - Getting IsEP1Field: false
-C17:42:22.427 [Test worker] INFO  timer.EdgeConnector - start _init
-Z17:42:22.427 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-A17:42:22.427 [Test worker] INFO  timer.EdgeConnector - end _init
-E17:42:22.428 [Test worker] INFO  EdgeConnector - Setting IsEP1Table 
-F17:42:22.428 [Test worker] DEBUG EdgeConnector - Setting to ... false
-K17:42:22.428 [Test worker] INFO  EdgeConnector - Getting IsEP1Table: false
-C17:42:22.428 [Test worker] INFO  timer.EdgeConnector - start _init
-Z17:42:22.428 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-A17:42:22.428 [Test worker] INFO  timer.EdgeConnector - end _init
-E17:42:22.428 [Test worker] INFO  EdgeConnector - Setting IsEP2Field 
-F17:42:22.428 [Test worker] DEBUG EdgeConnector - Setting to ... false
-K17:42:22.428 [Test worker] INFO  EdgeConnector - Getting IsEP2Field: false
-C17:42:22.428 [Test worker] INFO  timer.EdgeConnector - start _init
-Z17:42:22.429 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
-A17:42:22.429 [Test worker] INFO  timer.EdgeConnector - end _init
-E17:42:22.429 [Test worker] INFO  EdgeConnector - Setting IsEP2Table 
-F17:42:22.429 [Test worker] DEBUG EdgeConnector - Setting to ... false
-K17:42:22.429 [Test worker] INFO  EdgeConnector - Getting IsEP2Table: false
+K01:33:30.822 [Test worker] INFO  EdgeConnector - Getting IsEP2Table: false
+C01:33:30.822 [Test worker] INFO  timer.EdgeConnector - start _init
+Z01:33:30.822 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+A01:33:30.822 [Test worker] INFO  timer.EdgeConnector - end _init
+E01:33:30.823 [Test worker] INFO  EdgeConnector - Setting IsEP1Field 
+F01:33:30.823 [Test worker] DEBUG EdgeConnector - Setting to ... false
+K01:33:30.823 [Test worker] INFO  EdgeConnector - Getting IsEP1Field: false
+C01:33:30.823 [Test worker] INFO  timer.EdgeConnector - start _init
+Z01:33:30.823 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+A01:33:30.824 [Test worker] INFO  timer.EdgeConnector - end _init
+E01:33:30.824 [Test worker] INFO  EdgeConnector - Setting IsEP1Table 
+F01:33:30.824 [Test worker] DEBUG EdgeConnector - Setting to ... false
+K01:33:30.824 [Test worker] INFO  EdgeConnector - Getting IsEP1Table: false
+C01:33:30.824 [Test worker] INFO  timer.EdgeConnector - start _init
+Z01:33:30.824 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+A01:33:30.825 [Test worker] INFO  timer.EdgeConnector - end _init
+E01:33:30.825 [Test worker] INFO  EdgeConnector - Setting IsEP2Field 
+F01:33:30.825 [Test worker] DEBUG EdgeConnector - Setting to ... false
+K01:33:30.825 [Test worker] INFO  EdgeConnector - Getting IsEP2Field: false
+C01:33:30.825 [Test worker] INFO  timer.EdgeConnector - start _init
+Z01:33:30.825 [Test worker] INFO  EdgeConnector - inputString: 1|2|3|testStyle1|testStyle2
+A01:33:30.825 [Test worker] INFO  timer.EdgeConnector - end _init
+E01:33:30.826 [Test worker] INFO  EdgeConnector - Setting IsEP2Table 
+F01:33:30.826 [Test worker] DEBUG EdgeConnector - Setting to ... false
+K01:33:30.826 [Test worker] INFO  EdgeConnector - Getting IsEP2Table: false
+_01:33:30.829 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+H01:33:30.830 [Test worker] INFO  EdgeField - Retrieving Field Bound : 0
+_01:33:30.830 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+A01:33:30.830 [Test worker] INFO  EdgeField - Primary key : false
+_01:33:30.831 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+_01:33:30.831 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+G01:33:30.831 [Test worker] DEBUG EdgeField - setting varcharValue to 1
+?01:33:30.831 [Test worker] INFO  EdgeField - varcharValue is 1
+_01:33:30.832 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+A01:33:30.832 [Test worker] INFO  EdgeField - Setting Field Bound
+K01:33:30.834 [Test worker] DEBUG EdgeField - Field Grade is now bound to 1
+H01:33:30.834 [Test worker] INFO  EdgeField - Retrieving Field Bound : 1
+_01:33:30.834 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+B01:33:30.835 [Test worker] INFO  EdgeField - Retrieving tableID 0
+_01:33:30.835 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+C01:33:30.835 [Test worker] INFO  EdgeField - setting dataType to 2
+A01:33:30.836 [Test worker] INFO  EdgeField - Field data type : 2
+_01:33:30.836 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+A01:33:30.836 [Test worker] INFO  EdgeField - Field data type : 0
+_01:33:30.836 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+_01:33:30.843 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+I01:33:30.844 [Test worker] INFO  EdgeField - Setting primary key to true
+I01:33:30.844 [Test worker] DEBUG EdgeField - Primary key now set to true
+@01:33:30.844 [Test worker] INFO  EdgeField - Primary key : true
+_01:33:30.845 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+C01:33:30.845 [Test worker] INFO  EdgeField - Retrieving name Grade
+_01:33:30.845 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+=01:33:30.846 [Test worker] INFO  EdgeField - Table Bound : 0
+_01:33:30.846 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+>01:33:30.846 [Test worker] INFO  EdgeField - Setting table id
+Q01:33:30.847 [Test worker] DEBUG EdgeField - Table id for field is now Grade: 12
+C01:33:30.847 [Test worker] INFO  EdgeField - Retrieving tableID 12
+_01:33:30.848 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+C01:33:30.848 [Test worker] INFO  EdgeField - Default value is set 
+_01:33:30.848 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+A01:33:30.849 [Test worker] INFO  EdgeField - Setting Table Bound
+Q01:33:30.849 [Test worker] DEBUG EdgeField - Field Grade is now bound to table 1
+=01:33:30.849 [Test worker] INFO  EdgeField - Table Bound : 1
+_01:33:30.850 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+Q01:33:30.850 [Test worker] INFO  EdgeField - Current disallow null value : false
+ _01:33:30.850 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+ K01:33:30.851 [Test worker] WARN  EdgeField - Varchar value -1 not above 0.
+ ?01:33:30.851 [Test worker] INFO  EdgeField - varcharValue is 1
+!_01:33:30.851 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+!C01:33:30.851 [Test worker] INFO  EdgeField - Setting default value
+!H01:33:30.852 [Test worker] DEBUG EdgeField - Default value is now empty
+!G01:33:30.852 [Test worker] INFO  EdgeField - Default value is set none
+"_01:33:30.852 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+"D01:33:30.853 [Test worker] INFO  EdgeField - Retrieving numFigure 3
+#_01:33:30.853 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+#?01:33:30.853 [Test worker] INFO  EdgeField - varcharValue is 1
+$_01:33:30.853 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+$J01:33:30.854 [Test worker] INFO  EdgeField - Setting disallow null : true
+$N01:33:30.854 [Test worker] DEBUG EdgeField - Disallow null is now set to true
+$P01:33:30.856 [Test worker] INFO  EdgeField - Current disallow null value : true
+%_01:33:30.857 [Test worker] INFO  EdgeField - Creating EdgeField 3|Grade|0|0|0|0|1|false|false|
+%b01:33:30.860 [Test worker] WARN  EdgeField - Data type 600 not between 0 and data type length 600
+%A01:33:30.860 [Test worker] INFO  EdgeField - Field data type : 0
+'&P01:33:30.862 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+'&G01:33:30.862 [Test worker] INFO  EdgeTable - Native field being added.
+'&C01:33:30.863 [Test worker] INFO  EdgeTable - Adding native field 4
+'&G01:33:30.863 [Test worker] INFO  EdgeTable - Native field being added.
+'&C01:33:30.863 [Test worker] INFO  EdgeTable - Adding native field 5
+'&G01:33:30.863 [Test worker] INFO  EdgeTable - Native field being added.
+'&C01:33:30.863 [Test worker] INFO  EdgeTable - Adding native field 6
+'&G01:33:30.863 [Test worker] INFO  EdgeTable - Native field being added.
+'&C01:33:30.863 [Test worker] INFO  EdgeTable - Adding native field 7
+'&D01:33:30.864 [Test worker] DEBUG EdgeTable - Moving down to index 2
+'&S01:33:30.864 [Test worker] INFO  EdgeTable - Retrieving native fields [4, 5, 7, 6]
+'(P01:33:30.865 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+'(G01:33:30.865 [Test worker] INFO  EdgeTable - Native field being added.
+'(C01:33:30.865 [Test worker] INFO  EdgeTable - Adding native field 1
+'(G01:33:30.865 [Test worker] INFO  EdgeTable - Related fields being set.
+'(R01:33:30.866 [Test worker] DEBUG EdgeTable - Setting related field 0 with value 3
+'(K01:33:30.866 [Test worker] INFO  EdgeTable - Retrieving related fields [3]
+')P01:33:30.866 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+')G01:33:30.866 [Test worker] INFO  EdgeTable - Native field being added.
+')C01:33:30.867 [Test worker] INFO  EdgeTable - Adding native field 1
+')G01:33:30.867 [Test worker] INFO  EdgeTable - Native field being added.
+')C01:33:30.867 [Test worker] INFO  EdgeTable - Adding native field 2
+')G01:33:30.867 [Test worker] INFO  EdgeTable - Native field being added.
+')C01:33:30.867 [Test worker] INFO  EdgeTable - Adding native field 3
+')H01:33:30.867 [Test worker] INFO  EdgeTable - Related table being added.
+')D01:33:30.867 [Test worker] INFO  EdgeTable - Adding related table 8
+')H01:33:30.868 [Test worker] INFO  EdgeTable - Related table being added.
+')D01:33:30.868 [Test worker] INFO  EdgeTable - Adding related table 9
+')H01:33:30.868 [Test worker] INFO  EdgeTable - Related table being added.
+')E01:33:30.868 [Test worker] INFO  EdgeTable - Adding related table 10
+')G01:33:30.868 [Test worker] INFO  EdgeTable - Related fields being set.
+')R01:33:30.868 [Test worker] DEBUG EdgeTable - Setting related field 0 with value 4
+')G01:33:30.868 [Test worker] INFO  EdgeTable - Related fields being set.
+')R01:33:30.869 [Test worker] DEBUG EdgeTable - Setting related field 1 with value 5
+')G01:33:30.869 [Test worker] INFO  EdgeTable - Related fields being set.
+')R01:33:30.869 [Test worker] DEBUG EdgeTable - Setting related field 2 with value 6
+'*P01:33:30.869 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+'*H01:33:30.870 [Test worker] INFO  EdgeTable - Related table being added.
+'*D01:33:30.870 [Test worker] INFO  EdgeTable - Adding related table 8
+'*H01:33:30.870 [Test worker] INFO  EdgeTable - Related table being added.
+'*D01:33:30.870 [Test worker] INFO  EdgeTable - Adding related table 9
+'*H01:33:30.870 [Test worker] INFO  EdgeTable - Related table being added.
+'*E01:33:30.870 [Test worker] INFO  EdgeTable - Adding related table 10
+'*R01:33:30.870 [Test worker] INFO  EdgeTable - Retrieving related tables [8, 9, 10]
+'+P01:33:30.871 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+'+G01:33:30.871 [Test worker] INFO  EdgeTable - Native field being added.
+'+C01:33:30.871 [Test worker] INFO  EdgeTable - Adding native field 1
+'+G01:33:30.871 [Test worker] INFO  EdgeTable - Native field being added.
+'+C01:33:30.871 [Test worker] INFO  EdgeTable - Adding native field 2
+'+G01:33:30.871 [Test worker] INFO  EdgeTable - Native field being added.
+'+C01:33:30.872 [Test worker] INFO  EdgeTable - Adding native field 3
+'+P01:33:30.872 [Test worker] INFO  EdgeTable - Retrieving native fields [1, 2, 3]
+',P01:33:30.872 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+',K01:33:30.872 [Test worker] INFO  EdgeTable - Retrieving name testEdgeTable
+'-P01:33:30.872 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+'-G01:33:30.873 [Test worker] INFO  EdgeTable - Native field being added.
+'-C01:33:30.873 [Test worker] INFO  EdgeTable - Adding native field 4
+'-G01:33:30.873 [Test worker] INFO  EdgeTable - Native field being added.
+'-C01:33:30.873 [Test worker] INFO  EdgeTable - Adding native field 5
+'-G01:33:30.873 [Test worker] INFO  EdgeTable - Native field being added.
+'-C01:33:30.873 [Test worker] INFO  EdgeTable - Adding native field 6
+'-G01:33:30.873 [Test worker] INFO  EdgeTable - Native field being added.
+'-C01:33:30.874 [Test worker] INFO  EdgeTable - Adding native field 7
+'-H01:33:30.874 [Test worker] DEBUG EdgeTable - Moving field up at index 3
+'-S01:33:30.874 [Test worker] INFO  EdgeTable - Retrieving native fields [4, 5, 7, 6]
+'.P01:33:30.874 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+'.J01:33:30.874 [Test worker] INFO  EdgeTable - Retrieving related tables []
+'/P01:33:30.875 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+'/I01:33:30.875 [Test worker] INFO  EdgeTable - Retrieving native fields []
+'0P01:33:30.875 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+'0G01:33:30.875 [Test worker] INFO  EdgeTable - Native field being added.
+'0C01:33:30.875 [Test worker] INFO  EdgeTable - Adding native field 1
+'0J01:33:30.876 [Test worker] INFO  EdgeTable - Retrieving native fields [1]
+'1P01:33:30.876 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+'1D01:33:30.876 [Test worker] INFO  EdgeTable - Retrieving numFigure 1
+'2P01:33:30.877 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+'2G01:33:30.877 [Test worker] INFO  EdgeTable - Native field being added.
+'2C01:33:30.877 [Test worker] INFO  EdgeTable - Adding native field 4
+'2G01:33:30.877 [Test worker] INFO  EdgeTable - Native field being added.
+'2C01:33:30.877 [Test worker] INFO  EdgeTable - Adding native field 5
+'2G01:33:30.877 [Test worker] INFO  EdgeTable - Native field being added.
+'2C01:33:30.878 [Test worker] INFO  EdgeTable - Adding native field 6
+'2G01:33:30.878 [Test worker] INFO  EdgeTable - Native field being added.
+'2C01:33:30.878 [Test worker] INFO  EdgeTable - Adding native field 7
+'2H01:33:30.878 [Test worker] DEBUG EdgeTable - Moving field up at index 0
+'2C01:33:30.878 [Test worker] DEBUG EdgeTable - Field has been moved.
+'2S01:33:30.878 [Test worker] INFO  EdgeTable - Retrieving native fields [4, 5, 6, 7]
+'3P01:33:30.878 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+'3H01:33:30.879 [Test worker] INFO  EdgeTable - Related table being added.
+'3D01:33:30.879 [Test worker] INFO  EdgeTable - Adding related table 2
+'3K01:33:30.879 [Test worker] INFO  EdgeTable - Retrieving related tables [2]
+'4P01:33:30.879 [Test worker] INFO  EdgeTable - Creating EdgeTable 1|testEdgeTable
+'4G01:33:30.879 [Test worker] INFO  EdgeTable - Native field being added.
+'4C01:33:30.879 [Test worker] INFO  EdgeTable - Adding native field 4
+'4G01:33:30.880 [Test worker] INFO  EdgeTable - Native field being added.
+'4C01:33:30.880 [Test worker] INFO  EdgeTable - Adding native field 5
+'4G01:33:30.880 [Test worker] INFO  EdgeTable - Native field being added.
+'4C01:33:30.880 [Test worker] INFO  EdgeTable - Adding native field 6
+'4G01:33:30.880 [Test worker] INFO  EdgeTable - Native field being added.
+'4C01:33:30.880 [Test worker] INFO  EdgeTable - Adding native field 7
+'4D01:33:30.880 [Test worker] DEBUG EdgeTable - Moving down to index 3
+'4C01:33:30.880 [Test worker] DEBUG EdgeTable - Field has been moved.
+'4S01:33:30.880 [Test worker] INFO  EdgeTable - Retrieving native fields [4, 5, 6, 7]

@@ -4,7 +4,7 @@ import org.apache.logging.log4j.Logger;
 
 public class EdgeConnector {
 
-   public static Logger logger = LogManager.getLogger(EdgeConnector.class);
+   public static Logger logger = LogManager.getLogger(EdgeConnector.class.getName());
    public static Logger timeLogger = LogManager.getLogger("timer." + EdgeConnector.class.getName());
 
    private int numConnector, endPoint1, endPoint2;
