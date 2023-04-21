@@ -196,44 +196,4 @@ public abstract class EdgeConvertFileParser {
       return fields;
    }
 
-   public void openFile(File inputFile) {
-      private FileReader fr;
-      private BufferedReader br;
-      private String currentLine;
-      try {
-         logger.info("Opening file : " + inputFile);
-         fr = new FileReader(inputFile);
-         br = new BufferedReader(fr);
-         // test for what kind of file we have
-         currentLine = br.readLine().trim();
-         numLine++;
-         if (currentLine.startsWith(EDGE_ID)) { // the file chosen is an Edge Diagrammer file
-            logger.info("Parsing " + inputFile + " as edge file.");
-            this.parseEdgeFile(); // parse the file
-            br.close();
-            this.makeArrays(); // convert ArrayList objects into arrays of the appropriate Class type
-            this.resolveConnectors(); // Identify nature of Connector endpoints
-         } else {
-            if (currentLine.startsWith(SAVE_ID)) { // the file chosen is a Save file created by this application
-               logger.info("Parsing " + inputFile + " as save file.");
-               this.parseSaveFile(); // parse the file
-               br.close();
-               this.makeArrays(); // convert ArrayList objects into arrays of the appropriate Class type
-            } else { // the file chosen is something else
-               logger.error("Cannot parse " + inputFile + " because of unrecognized file format.");
-               JOptionPane.showMessageDialog(null, "Unrecognized file format");
-            }
-         }
-      } // try
-      catch (FileNotFoundException fnfe) {
-         logger.error("File Not Found Exception. Cannot find \"" + inputFile.getName() + "\".");
-         //TODO: Give user feedback before system exit
-         System.exit(0);
-      } // catch FileNotFoundException
-      catch (IOException ioe) {
-         logger.error("IOException " + ioe);
-         //TODO: Give user feedback before system exit
-         System.exit(0);
-      } // catch IOException
-   } // openFile()
 } // EdgeConvertFileHandler
