@@ -74,7 +74,9 @@ public class EdgeFieldTest {
 
     @Test
     public void testGetStrDataType() {
-        assertEquals("testEdgeField was initialized with data type as str 0", "0", testEdgeField.getStrDataType());
+        String[] checkDataType = { "Varchar", "Boolean", "Integer", "Double" };
+        assertArrayEquals("testEdgeField was initialized with data type options", checkDataType,
+                testEdgeField.getStrDataType());
     }
 
     @Test
