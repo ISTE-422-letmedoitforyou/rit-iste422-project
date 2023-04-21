@@ -7,9 +7,6 @@ import java.util.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 public class CreateDDLMySQL extends EdgeConvertCreateDDL {
    //public static Logger logger = LogManager.getLogger(EdgeConvertCreateDDL.class.getName());
    protected String databaseName;
